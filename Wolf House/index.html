@@ -15,7 +15,7 @@
   <body>
     <div class="layout">
       <header>
-        <section class="banner">
+        <div class="banner">
           <div class="container">
             <span class="banner__title--bold">Winter Gear Guide</span>
             <span class="banner__title"
@@ -23,13 +23,13 @@
             >
             <a class="banner__link" href="#">Read more</a>
           </div>
-        </section>
-        <section class="menu">
+        </div>
+        <div class="menu">
           <div class="container">
             <div class="menu__logo logo">
               <a class="logo__link" href="#">
                 <img class="logo__img" src="img/logo.png" alt="logo" />
-                <div class="logo__title">Wolf House</div>
+                <h1 class="logo__title">Wolf House</h1>
               </a>
             </div>
             <form class="menu__search search">
@@ -62,7 +62,7 @@
               <ul class="info__list">
                 <li class="info__list-item">
                   <button class="info__language dropdown">
-                    <div class="dropdown__value">En</div>
+                    <span class="dropdown__value">En</span>
                     <img
                       class="dropdown__icon"
                       src="img/flag.svg"
@@ -73,7 +73,7 @@
                 </li>
                 <li class="info__list-item">
                   <button class="menu__account dropdown">
-                    <div class="dropdown__value">My account</div>
+                    <span class="dropdown__value">My account</span>
                     <img
                       class="dropdown__icon"
                       src="img/arrow.svg"
@@ -84,7 +84,7 @@
                 </li>
                 <li class="info__list-item">
                   <button class="menu__currency dropdown">
-                    <div class="dropdown__value">USD</div>
+                    <span class="dropdown__value">USD</span>
                     <img
                       class="dropdown__icon"
                       src="img/arrow.svg"
@@ -96,8 +96,8 @@
               </ul>
             </div>
           </div>
-        </section>
-        <section class="categories">
+        </div>
+        <div class="categories">
           <div class="container">
             <button class="categories__menu button-menu">
               <div class="button-menu__burger">
@@ -130,8 +130,8 @@
               </ul>
             </nav>
           </div>
-        </section>
-        <section class="slider">
+        </div>
+        <div class="slider">
           <div class="container">
             <div class="slider__content">
               <h1 class="slider__title">
@@ -143,12 +143,12 @@
               <button class="slider__button">Button</button>
             </div>
           </div>
-        </section>
+        </div>
       </header>
       <main>
         <div class="container">
           <h2 class="main__title">Snowboards</h2>
-          <section class="main__catalog catalog">
+          <div class="main__catalog catalog">
             <form class="catalog__sidebar sidebar">
               <ul class="sidebar__list">
                 <li class="sidebar__list-item filter">
@@ -167,18 +167,33 @@
                   </div>
                   <ul class="filter__list">
                     <li class="filter__list-item">
-                      <input type="checkbox" id="all" name="all" value="all" />
+                      <input
+                        type="checkbox"
+                        id="id1"
+                        name="name1"
+                        value="value1"
+                      />
                       <label class="filter__label" for="all">
                         All-Mauntain Snowboards (51)</label
                       >
                     </li>
                     <li class="filter__list-item list-item--hidden">
-                      <input type="checkbox" id="" name="" value="" />
+                      <input
+                        type="checkbox"
+                        id="id2"
+                        name="name2"
+                        value="value2"
+                      />
                       <label class="filter__label" for=""></label>
                     </li>
                     <li class="filter__list-item list-item--hidden">
-                      <input type="checkbox" id="" name="" value="" />
-                      <label class="filter__label" for=""> </label>
+                      <input
+                        type="checkbox"
+                        id="id3"
+                        name="name3"
+                        value="value3"
+                      />
+                      <label class="filter__label" for=""></label>
                     </li>
                   </ul>
                   <button class="filter__more">View more...</button>
@@ -485,7 +500,7 @@
                     <select
                       class="select-container__value"
                       name="view"
-                      id="view"
+                      id="view2"
                     >
                       <option value="popular">Most Popular</option>
                     </select>
@@ -712,7 +727,7 @@
               </div>
               <div class="paginator__title">of 25</div>
             </div>
-          </section>
+          </div>
           <section class="main__best-sellers best-sellers">
             <div class="best-sellers__content">
               <h2 class="best-sellets__title">Best Sellers</h2>
@@ -825,7 +840,7 @@
         </div>
       </main>
       <footer>
-        <section class="categories categories--footer">
+        <div class="categories categories--footer">
           <div class="container">
             <nav class="categories__nav">
               <ul class="categories__list">
@@ -853,8 +868,8 @@
               </ul>
             </nav>
           </div>
-        </section>
-        <section class="map">
+        </div>
+        <div class="map">
           <div class="container">
             <ul class="map__list">
               <li class="map__list-item map-column">
@@ -1004,15 +1019,15 @@
               </li>
             </ul>
           </div>
-        </section>
-        <section class="copyright">
+        </div>
+        <div class="copyright">
           <div class="container">
             <img class="copyright__icon" src="img/M-sport.svg" alt="" />
             <div class="copyright__title">
               © M-SPORT.com – All Rights Reserved
             </div>
           </div>
-        </section>
+        </div>
       </footer>
     </div>
   </body>
