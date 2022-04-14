@@ -256,13 +256,35 @@ body {
 
 .button-menu__burger {
   display: inline-block;
-  width: 14px;
-  height: 10px;
+  width: 16px;
+  line-height: 2px;
   margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+.button-menu__burger::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  margin-bottom: 2px;
 }
 
 .button-menu__burger-line {
-  width: 14px;
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  margin-bottom: 2px;
+}
+
+.button-menu__burger::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
   height: 2px;
   border-radius: 2px;
   background-color: #fff;
@@ -270,7 +292,6 @@ body {
 }
 
 .button-menu__title {
-  display: inline;
   font-weight: 600;
 }
 
