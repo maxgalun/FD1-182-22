@@ -4,15 +4,6 @@
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font: inherit;
-}
-
 ol[class],
 ul[class] {
   list-style: none;
@@ -138,6 +129,7 @@ body {
 }
 
 .dropdown {
+  font-size: 14px;
   vertical-align: middle;
   cursor: pointer;
   background-color: inherit;
@@ -240,12 +232,14 @@ body {
 }
 
 .contacts__button-title {
+  font-size: 16px;
   font-weight: 700;
 }
 
 .button-menu {
   width: 145px;
   height: 40px;
+  font-size: 16px;
   line-height: 40px;
   border-radius: 4px;
   text-align: center;
@@ -256,39 +250,30 @@ body {
 
 .button-menu__burger {
   display: inline-block;
-  width: 16px;
-  line-height: 2px;
-  margin-right: 5px;
-  vertical-align: text-bottom;
+  width: 14px;
+  font-size: 14px;
+  line-height: 0.1px;
+  margin-right: 10px;
 }
 
 .button-menu__burger::before {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #fff;
-  margin-bottom: 2px;
+  width: 14px;
+  border-bottom: 2px solid white;
 }
 
 .button-menu__burger-line {
   display: inline-block;
-  width: 16px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #fff;
-  margin-bottom: 2px;
+  width: 14px;
+  border-bottom: 2px solid white;
 }
 
 .button-menu__burger::after {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #fff;
-  margin-bottom: 2px;
+  width: 14px;
+  border-bottom: 2px solid white;
 }
 
 .button-menu__title {
