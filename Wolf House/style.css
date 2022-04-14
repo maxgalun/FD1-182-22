@@ -409,7 +409,7 @@ button.slider__button {
 }
 
 .product__title {
-  max-height: 38px;
+  height: 38px;
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 600;
@@ -440,6 +440,7 @@ button.slider__button {
 
 .product__rating {
   float: right;
+  padding-top: 5px;
 }
 
 .rating-star__icon {
@@ -556,6 +557,7 @@ button.slider__button {
 .best-product__title {
   font-weight: 400;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .main_best-sellers {
@@ -719,4 +721,38 @@ input.subscribe__input {
 
 .app__link {
   float: left;
+}
+
+.rating__stars {
+  width: 65px;
+  height: 13px;
+  background-image: url(img/star-gray.svg);
+  font-size: 0;
+}
+
+.rating__stars::before {
+  content: "";
+  height: 13px;
+  display: inline-block;
+  background-image: url(img/star-blue.svg);
+}
+
+.rating__10::before {
+  width: 13px;
+}
+
+.rating__20::before {
+  width: 26px;
+}
+
+.rating__30::before {
+  width: 39px;
+}
+
+.rating__40::before {
+  width: 52px;
+}
+
+.rating__50::before {
+  width: 65px;
 }
