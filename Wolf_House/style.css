@@ -545,7 +545,7 @@ button.slider__button {
 .best-product__content {
   height: 272px;
   border: 1px solid #bfbebe;
-  padding: 15px 15px 20px;
+  padding: 15px 15px 10px;
 }
 
 .best-product__picture {
