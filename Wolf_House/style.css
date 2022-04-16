@@ -466,7 +466,7 @@ button.slider__button {
 .select-container {
   display: inline-block;
   line-height: 44px;
-  border: 1px solid #bfbebe;
+  outline: 1px solid #bfbebe;
   border-radius: 4px;
 }
 
