@@ -9,12 +9,12 @@ ul[class] {
   list-style: none;
 }
 
-a[class] {
+a {
   color: inherit;
   text-decoration: none;
 }
 
-input[class],
+input,
 button,
 select {
   appearance: none;
@@ -385,6 +385,10 @@ button.slider__button {
 
 .filter__list-item {
   margin-bottom: 10px;
+}
+
+.filter__input {
+  appearance: auto;
 }
 
 .filter__label {
