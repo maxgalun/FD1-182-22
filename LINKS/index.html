@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 30px;
+      }
+
+      div {
+        margin-bottom: 50px;
+      }
+
+      a:link {
+        color: green;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      li {
+        list-style-type: none;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* --------------------inline-------------------- */
+
+      .inline a {
+        margin-right: -0.26em;
+        padding: 10px 20px;
+        border-right: 4px solid red;
+      }
+
+      .inline a:last-child {
+        border-right: none;
+      }
+
+      /* --------------------list-------------------- */
+
+      .list li {
+        display: inline;
+        margin-right: -0.26em;
+        padding: 10px 20px;
+        border-right: 4px solid red;
+      }
+
+      .list li:last-child {
+        border-right: none;
+      }
+
+      /* --------------------content-------------------- */
+
+      .list-content {
+        line-height: 54px;
+      }
+
+      .list-content li:first-child {
+        padding-left: 20px;
+      }
+
+      .list-content li {
+        display: inline-block;
+        margin-right: -0.26em;
+      }
+
+      .list-content li:last-child {
+        border-right: none;
+      }
+
+      .list-content a::after {
+        content: "|";
+        padding: 0 16px;
+        font-size: 54px;
+        font-weight: 600;
+        color: red;
+        vertical-align: bottom;
+      }
+
+      .list-content li:last-child a:after {
+        content: "";
+      }
+
+      /* --------------------list-background-color-------------------- */
+
+      .list-background-color {
+        line-height: 54px;
+      }
+
+      .list-background-color li:first-child {
+        padding-left: 20px;
+      }
+
+      .list-background-color li {
+        display: inline-block;
+        margin-right: -0.26em;
+      }
+
+      .list-background-color li::after {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 54px;
+        margin: 0 20px;
+        background-color: red;
+        vertical-align: middle;
+      }
+
+      .list-background-color li:last-child::after {
+        content: "";
+        background-color: transparent;
+      }
+
+      /* --------------------devider-------------------- */
+
+      .devider li {
+        display: inline;
+        margin-right: -0.26em;
+        padding: 10px 20px;
+      }
+
+      .list li:last-child {
+        border-right: none;
+      }
+
+      .devider span {
+        padding: 10px 0;
+        border-right: 4px solid red;
+      }
+
+      /* --------------------float-------------------- */
+
+      .float li {
+        float: left;
+        padding: 10px 20px;
+        border-right: 4px solid red;
+      }
+
+      .float::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .float li:last-child {
+        border-right: none;
+      }
+
+      /* --------------------table-------------------- */
+      table {
+        border-collapse: collapse;
+      }
+
+      table td {
+        padding: 10px 20px;
+        border-right: 4px solid red;
+      }
+
+      table td:last-child {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inline">
+      <!--ссылки в одну строку, вертикальная линия - правая граница элемента;-->
+      <!--недостатки: плохо по семантике - связанные смысловые элементы необходимо объединять в списки;надо дополнительно применять отрицательный внешний отступ для удаления отступов между инлайновыми элементами; достоинства: короткая запись в разметке, вертикальное выравнивание контента в элементе -->
+      <a href="#">первая ссылка</a>
+      <a href="#">вторая ссылка</a>
+      <a href="#">третья ссылка</a>
+      <a href="#">четвертая ссылка</a>
+      <a href="#">пятая ссылка</a>
+    </div>
+
+    <div class="list">
+      <!--делаем элементы списка строчными, вертикальная линия - правая граница элемента; по сравнению с первым вариантом добавились дополнительные элементы, но хорошо по семантике-->
+      <ul>
+        <li><a href="#">первая ссылка</a></li>
+        <li><a href="#">вторая ссылка</a></li>
+        <li><a href="#">третья ссылка</a></li>
+        <li><a href="#">четвертая ссылка</a></li>
+        <li><a href="#">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div class="float">
+      <!--делаем элементы списка плавающими, вертикальная линия - правая граница элемента-->
+      <!--неплохой вариаант, но придется применять дополнительные стилевые свойства - clearfix-->
+      <ul>
+        <li><a href="#">первая ссылка</a></li>
+        <li><a href="#">вторая ссылка</a></li>
+        <li><a href="#">третья ссылка</a></li>
+        <li><a href="#">четвертая ссылка</a></li>
+        <li><a href="#">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div class="list-content">
+      <!--делаем элементы списка строчными, вертикальная линия - символ веритикальной черты - плохой вариант для вертикального разделителя (много дополнительных стилевых элементов)-->
+      <ul>
+        <li><a href="#">первая ссылка</a></li>
+        <li><a href="#">вторая ссылка</a></li>
+        <li><a href="#">третья ссылка</a></li>
+        <li><a href="#">четвертая ссылка</a></li>
+        <li><a href="#">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div class="list-background-color">
+      <!--делаем элементы списка строчными, вертикальная линия - элемент с фоновым цветом  или правая граница элемента - также плохой вариант для вертикального разделителя (много дополнительных стилевых элементов)-->
+      <ul>
+        <li><a href="#">первая ссылка</a></li>
+        <li><a href="#">вторая ссылка</a></li>
+        <li><a href="#">третья ссылка</a></li>
+        <li><a href="#">четвертая ссылка</a></li>
+        <li><a href="#">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div class="devider">
+      <!--делаем элементы списка строчными, вертикальная линия - элемент в разметке между элементами списка-->
+      <!--просто для реализации, плохо по семантике - лишний пустой стилевой элемент в разметке-->
+      <ul>
+        <li><a href="#">первая ссылка</a></li>
+        <span></span>
+        <li><a href="#">вторая ссылка</a></li>
+        <span></span>
+        <li><a href="#">третья ссылка</a></li>
+        <span></span>
+        <li><a href="#">четвертая ссылка</a></li>
+        <span></span>
+        <li><a href="#">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <!--размещаем элементы в ячейках строки таблицы, вертикальная линия - правая граница ячейки-->
+      <!--плохо по семантике, но достаточно просто для реализации-->
+      <table>
+        <tr>
+          <td><a href="#">первая ссылка</a></td>
+          <td><a href="#">вторая ссылка</a></td>
+          <td><a href="#">третья ссылка</a></td>
+          <td><a href="#">четвертая ссылка</a></td>
+          <td><a href="#">пятая ссылка</a></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
