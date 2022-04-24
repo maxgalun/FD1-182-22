@@ -9,9 +9,9 @@
   <body>
     <ul>
       <li>
-        &lt;dl&gt, &lt;dt&gt, &lt;dd&gt - список пар "имя-значение"
-        <dl>
-          список определений типа
+        &lt;dl&gt; &lt;dt&gt; &lt;dd&gt; - список пар "имя-значение"
+		<p>список определений типа
+			<dl>
           <dt>имя определения1</dt>
           <dd>значание определения1</dd>
           <dt>имя определения2</dt>
@@ -19,6 +19,8 @@
           <dt>имя определения3</dt>
           <dd>значание определения3</dd>
         </dl>
+		</p>
+
       </li>
       <li>
         &lt;pre&gt - "предварительно отформатированный" текст
@@ -79,38 +81,41 @@ PPPPPP                        PPPPPP            PPPPPP      EEEEEEEEEEEEEEEEEEEE
         </blockquote>
 		  </p>
       </li>
-	<li>
+		<li>
         &lt;q&gt; - выделение в тексте цитат (строчный элемент)
 		  <p>	Л.Н.Толстой утверждал, что <q>для того чтобы общение людей было возможно, нужно употреблять слова так, чтобы при каждом слове несомненно вызывались у всех соответствующие и точные понятия</q>.
 		  </p>
       </li>
-    </ul>
-	 <li>
+	 	<li>
 		  &lt;ins&gt;  - выделения текста, который был добавлен в новую версию документа<br>
-	 </li>
-	 	 <li>
-		  &lt;del&gt;  - выделения текста, который был удален в новой версии документа.
-<p>Настроящее дополнительное соглашение вступает в силу с <del>01 января 2022 года</del> <ins>01 февраля 2022 года.</ins></p>
-	 </li>
-	<li>
-	&lt;address&gt;  - поддержка контакной информации или статьи автора в составе документа.
-<p><address>Автор: Максим Галун.<br>
-	 <a href="mailto:maxgalun@gmail.com">свяжитесь со мной</a></address></p>
-	 </li>
-	 <li>
-	&lt;nobr&gt;  - уведомляет браузер отображать текст без переносов (этот тег не входит в спецификацию HTML и его наличие приведет к невалидному коду)
-<p><nobr>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nobis odit soluta saepe, iure quas veniam provident officiis repellendus natus, doloremque reprehenderit quia? Quasi ipsa porro optio id reprehenderit at. Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis id illum vel, tempore corrupti </nobr> asperiores dolores quidem perspiciatis repellendus, consectetur doloremque? Hic blanditiis numquam consectetur dolorem fugiat libero beatae animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quae reprehenderit similique optio aut culpa libero assumenda, vel incidunt! Adipisci animi quidem praesentium eius asperiores, quos veritatis eum sit dignissimos?</p>
-	 </li>
-	 <li>
-&lt;wbr&gt; - указывает браузеру место, где допускается делать перенос строки в тексте, если только этого требует ширина родительского элемента
-<p>без &lt;wbr&gt;</p>
-<div style="width: 600px; border: 1px solid black; font-size: 22px;">
-Самое длинное слово из химии: метоксихлордиэтиламинометилбутиламиноакридин
-</div>
-<p>с использованием&lt;wbr&gt;</p>
-<div style="width: 600px; border: 1px solid black; font-size: 22px;">
-Самое длинное слово из химии: мето<wbr>ксихлор<wbr>диэтил<wbr>амино<wbr>метил<wbr>бутил<wbr>амино<wbr>акридин
-</div>
-	 </li>
+	 	</li>
+	 	<li>
+			&lt;del&gt;  - выделения текста, который был удален в новой версии документа.
+		<p>Настроящее дополнительное соглашение вступает в силу с <del>01 января 2022 года</del> <ins>01 февраля 2022 года.</ins></p>
+	 	</li>
+		<li>
+		&lt;address&gt;  - поддержка контакной информации или статьи автора в составе документа.
+	<p><address>Автор: Максим Галун.<br>
+		<a href="mailto:maxgalun@gmail.com">свяжитесь со мной</a></address></p>
+	 	</li>
+	 	<li>
+			&lt;nobr&gt;  - уведомляет браузер отображать текст без переносов (этот тег не входит в спецификацию HTML и его наличие приведет к невалидному коду)
+		<p><nobr>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nobis odit soluta saepe, iure quas veniam provident officiis repellendus natus, doloremque reprehenderit quia? Quasi ipsa porro optio id reprehenderit at. Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis id illum vel, tempore corrupti </nobr> asperiores dolores quidem perspiciatis repellendus, consectetur doloremque? Hic blanditiis numquam consectetur dolorem fugiat libero beatae animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quae reprehenderit similique optio aut culpa libero assumenda, vel incidunt! Adipisci animi quidem praesentium eius asperiores, quos veritatis eum sit dignissimos?</p>
+	 	</li>
+	 	<li>
+		&lt;wbr&gt; - указывает браузеру место, где допускается делать перенос строки в тексте, если только этого требует ширина родительского элемента
+		<p>без &lt;wbr&gt;</p>
+		<div style="width: 600px; border: 1px solid black; font-size: 22px;">
+		Самое длинное слово из химии: метоксихлордиэтиламинометилбутиламиноакридин
+		</div>
+		<p>с использованием&lt;wbr&gt;</p>
+		<div style="width: 600px; border: 1px solid black; font-size: 22px;">
+		Самое длинное слово из химии: мето<wbr>ксихлор<wbr>диэтил<wbr>амино<wbr>метил<wbr>бутил<wbr>амино<wbr>акридин
+		</div>
+	 	</li>
+	 </ul>
+	 </body>
+
+	 </body>
   </body>
 </html>
