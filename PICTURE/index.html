@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         p {
+            font-size: 24px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Элемент &lt;picture&gt;</h1>
+      <p>
+         HTML-элемент &lt;picture&gt; служит контейнером для одного или более
+         элементов &lt;source&gt; и одного элемента &lt;img&gt; для обеспечения
+         оптимальной версии изображения для различных размеров экрана. Браузер
+         рассмотрит каждый из дочерних элементов &lt;source&gt; и выберет один,
+         соответствующий лучшему совпадению; если совпадений среди элементов
+         &lt;source&gt; найдено не будет, то будет выбран файл, указанный
+         атрибутом src элемента &lt;img&gt;. Затем выбранное изображение
+         отображается в пространстве, занятом элементом &lt;img&gt;. Чтобы
+         выбрать оптимальное изображение, user agent анализирует атрибуты
+         srcset, media, и type элемента &lt;source&gt; и выбирает совместимое
+         изображение, которое наилучшим образом соответствует текущему макету
+         страницы, характеристикам устройства отображения и т. д.
+      </p>
+      <p>
+         Например, дизайнер предоставил единственный вариант рекламного баннера,
+         читабельного только для десктопных мониторов. На экранах мобильных
+         устройств даннный баннер будет плохочитабельный.
+      </p>
+      <div style="width: 1110px">
+         <img src="img/raffles.png" alt="raffles" width="100%" height="auto" />
+      </div>
+      <p>
+         Решение – создать второй вариант баннера, расчитанного для маленьких
+         экранов, и использовать элемент &lt;picture&gt;:
+      </p>
+      <div style="width: 1110px">
+         <picture>
+            <source
+               media="(max-width: 768px)"
+               srcset="img/raffles_mobile.png"
+            />
+            <img
+               src="img/raffles.png"
+               alt="raffles"
+               width="100%"
+               height="auto"
+            />
+         </picture>
+      </div>
+   </body>
+</html>
