@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'miama';
+  src: url(./miama.eot);
+  src: url(./miama.eot?#iefix) format('embedded-opentype'),
+       url(./miama.svg#miama) format('svg'),
+       url(./miama.ttf) format('truetype'),
+       url(./miama.woff) format('woff'),
+       url(./miama.woff2) format('woff2');
+}
