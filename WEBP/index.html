@@ -23,21 +23,38 @@
             <li>В сравнении с PNG при сжатии без потерь файл по размеру меньше на 24%</li>
             <li>В сравнении JPEG при сжатии с потерями файл по размеру меньше на 25-34%</li>
          </ul>
+         <div>
+         Особенность WebP в том, что сжатие идет за счет снижения качества мелких деталей и текстур. При этом остаются четкие края рисунка и сохраняются гладкие переходы на сплошных участках. Самый большой недостаток этого формата – лица людей при низкой настройке качества выглядят немного пластиковыми.
+         </div>
       </div>
 
 <h3>Сравнение качества изображений</h3>
 
-      <div style="display: inline-block;">
-         Исходник png - 612.58 kB<br>
-         <img src="img/kodim15.png" width="400" alt="png" >
+<div style="margin-bottom: 30px;">
+         <div style="display: inline-block;border: 1px solid black;">
+         jpg- 398.45 kB<br>
+         <img src="img/pic.jpg" width="600px" alt="jpg" >
       </div>
-      <div style="display: inline-block;">
-         jpg- 106.16 kB<br>
-         <img src="img/kodim15.jpg" width="400" alt="jpg" >
+      <div style="display: inline-block;border: 1px solid black;">
+         webp - 330.01 kB<br>
+         <img src="img/pic.webp" width="600px" alt="webp" >
       </div>
-      <div style="display: inline-block;">
-         webp - 105.21 kB<br>
-         <img src="img/kodim15.webp" width="400" alt="webp" >
+</div>
+
+
+
+      <div style="display: inline-block;border: 1px solid black;background-color: #cddc39;">
+         png- 159.31 kB<br>
+         <img src="img/art.png" width="600px" alt="png" >
+      </div>
+      <div style="display: inline-block;border: 1px solid black;background-color: #cddc39;">
+         webp - 81.46 kB<br>
+         <img src="img/art.webp" width="600px" alt="webp" >
       </div>
 
+
+      <div class="article">
+         Таким образом, формат WebP целесообразно использовать на страницах сайтов с большим количеством изображений - например, каталог товаров интрернет-магазина и т.д., а также там, где не требуется высокое качество изображения. Это в значительной мере уменьшит объём трафика и скорость загрузки страницы.</div>
+
+      </div>
 </html>
