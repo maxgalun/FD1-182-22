@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+         li {
+            list-style: none;
+         }
+
+         .publication__list-item {
+            display: inline-block;
+         }
+
+         .my-form {
+            padding: 10px;
+         }
+
+         .grow {
+            width: 100%;
+         }
+
+         .title-row {
+            float: left;
+            width: 180px;
+         }
+
+         .value-row {
+            margin-bottom: 5px;
+            overflow: hidden;
+         }
+
+         .block {
+            display: block;
+            margin-top: 5px;
+         }
+
+         @media all and (max-width: 540px) {
+            .title-row {
+               float: none;
+            }
+
+            select[name="rubric"] {
+               width: 100%;
+            }
+
+            .publication__list-item {
+               display: block;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+         <div class="title">
+            Для публикации вашей статьи заполните, пожалуйста, следующую форму:
+         </div>
+         <form
+            class="my-form"
+            action="https://fe.it-academy.by/TestForm.php"
+            method="get"
+         >
+            <label class="title-row" for="name">Название статьи:</label>
+            <div class="value-row">
+               <input class="grow" type="text" name="name" />
+            </div>
+            <label class="title-row" for="rubric">Рубрика:</label>
+            <div class="value-row">
+               <select name="rubric" id="rubric">
+                  <option value="компьютерная техника">
+                     компьютерная техника
+                  </option>
+                  <option value="графика и дизайн">графика и дизайн</option>
+                  <option value="программирование" selected>
+                     программирование
+                  </option>
+               </select>
+            </div>
+            <label class="title-row" for="publication">Публикация:</label>
+            <div class="value-row">
+               <ul>
+                  <li class="publication__list-item">
+                     <input
+                        type="radio"
+                        name="publication"
+                        value="на сайте"
+                        id="r1"
+                     />
+                     <label for="r1">на сайте</label>
+                  </li>
+                  <li class="publication__list-item">
+                     <input
+                        type="radio"
+                        name="publication"
+                        value="в журнале"
+                        id="r2"
+                     />
+                     <label for="r2">в журнале</label>
+                  </li>
+                  <li class="publication__list-item">
+                     <input
+                        type="radio"
+                        name="publication"
+                        value="на сайте и в журнале"
+                        id="r3"
+                     />
+                     <label for="r3">на сайте и в журнале</label>
+                  </li>
+               </ul>
+            </div>
+            <label class="title-row" for="comment"
+               >Разрешить комментарии:</label
+            >
+            <input type="checkbox" name="comment" checked />
+            <label class="block" for="text">Текст статьи:</label>
+            <textarea
+               class="value-row grow"
+               name="text"
+               id="textarea1"
+               rows="3"
+            ></textarea>
+            <input type="submit" value="Опубликовать" />
+         </form>
+      </div>
+   </body>
+</html>
