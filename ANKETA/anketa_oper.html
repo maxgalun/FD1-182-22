@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var firstName;
+         var secondName;
+         var patronymic;
+         var age;
+         var sex;
+
+         const MAN_PENSION_AGE = 63;
+         const WOMAN_PENSION_AGE = 58;
+
+         firstName = prompt("Введите фамилию");
+         secondName = prompt("Введите имя");
+         patronymic = prompt("Введите отчество");
+
+         for (;;) {
+            age = +prompt("Введите возраст");
+            if (!isNaN(age)) break;
+         }
+
+         confirm("Ваш пол мужской?") ? (sex = "мужской") : (sex = "женский");
+
+         function hasPension(sex, age) {
+            return (sex === "мужской" && age >= MAN_PENSION_AGE) ||
+               (sex === "женский" && age >= WOMAN_PENSION_AGE)
+               ? "да"
+               : "нет";
+         }
+
+         alert(`ваше ФИО: ${firstName} + ${secondName} + ${patronymic}
+ваш возраст в годах: ${age}
+ваш возраст в днях: ${age * 365}
+через 5 лет вам будет: ${age + 5}
+ваш пол: ${sex}
+вы на пенсии: ${hasPension(sex, age)}`);
+      </script>
+   </body>
+</html>
