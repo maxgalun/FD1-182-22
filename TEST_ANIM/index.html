@@ -5,6 +5,185 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
+      <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         .container {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50vw;
+            height: 50vh;
+            background-color: rgb(226, 203, 146);
+            overflow: hidden;
+         }
+
+         .elem-1 {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            animation-name: animation-1;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+         }
+
+         .elem-2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            font-weight: 700;
+         }
+
+         .elem-2::before {
+            content: "";
+         }
+
+         .elem-3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            height: 100px;
+            background: url(img/mercedes.png) no-repeat right bottom;
+            background-size: contain;
+            animation: animation-5;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+         }
+
+         .container:hover .elem-2 {
+            animation-name: animation-2;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+         }
+
+         .container:hover .elem-2::before {
+            animation-name: animation-3;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+         }
+
+         .container:hover .elem-3 {
+            animation-name: animation-4;
+            animation-duration: 1s;
+            animation-delay: 2.5s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in;
+         }
+
+         @keyframes animation-1 {
+            from {
+               background-color: red;
+            }
+            17% {
+               background-color: orange;
+            }
+            34% {
+               background-color: yellow;
+            }
+            51% {
+               background-color: green;
+            }
+            68% {
+               background-color: dodgerblue;
+            }
+            85% {
+               background-color: blue;
+            }
+            to {
+               background-color: purple;
+            }
+         }
+
+         @keyframes animation-2 {
+            from {
+               transform: translate(-50%, -50%) scale(0%);
+               color: red;
+            }
+
+            29% {
+               transform: translate(-50%, -50%) scale(200%);
+               color: transparent;
+            }
+            30% {
+               transform: translate(-50%, -50%) scale(0%);
+               color: transparent;
+            }
+
+            31% {
+               transform: translate(-50%, -50%) scale(0%);
+               color: yellow;
+            }
+
+            59% {
+               transform: translate(-50%, -50%) scale(200%);
+               color: transparent;
+            }
+            60% {
+               transform: translate(-50%, -50%) scale(0%);
+               color: transparent;
+            }
+
+            61% {
+               transform: translate(-50%, -50%) scale(0%);
+               color: green;
+            }
+
+            to {
+               transform: translate(-50%, -50%) scale(200%);
+               color: transparent;
+            }
+         }
+
+         @keyframes animation-3 {
+            from {
+               content: "READY";
+            }
+
+            60% {
+               content: "STADY";
+            }
+
+            64% {
+               content: "GO";
+            }
+            to {
+               content: "GO";
+            }
+         }
+
+         @keyframes animation-4 {
+            from {
+               right: 0%;
+            }
+            to {
+               right: 100%;
+            }
+         }
+
+         @keyframes animation-5 {
+            from {
+               right: -25%;
+            }
+            to {
+               right: 0;
+            }
+         }
+      </style>
    </head>
-   <body></body>
+   <body>
+      <div class="container">
+         <div class="elem-1"></div>
+         <div class="elem-2"></div>
+         <div class="elem-3"></div>
+         <div class="elem-4"></div>
+      </div>
+   </body>
 </html>
