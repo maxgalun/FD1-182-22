@@ -32,17 +32,20 @@
          читабельного только для десктопных мониторов. На экранах мобильных
          устройств даннный баннер будет плохочитабельный.
       </p>
-      <div style="width: 1110px">
+      <div>
          <img src="img/raffles.png" alt="raffles" width="100%" height="auto" />
       </div>
       <p>
          Решение – создать второй вариант баннера, расчитанного для маленьких
          экранов, и использовать элемент &lt;picture&gt;:
       </p>
-      <div style="width: 1110px">
+      <div>
          <picture>
-            <source media="(min-width: 768px)" srcset="img/raffles.png" />
-            <img src="img/raffles_mobile.png" alt="raffles" width="100%" />
+            <source
+               media="(max-width: 768px)"
+               srcset="img/raffles_mobile.png"
+            />
+            <img src="img/raffles.png" alt="raffles" width="100%" />
          </picture>
       </div>
    </body>
