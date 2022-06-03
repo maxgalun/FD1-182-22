@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         .anim {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 111px;
+            height: 140px;
+            margin: auto;
+            background: url(img/run.webp);
+            background-position-x: 100%;
+
+            animation: playX 0.6s steps(9) infinite,
+               playY 1.2s steps(2) infinite;
+         }
+
+         @keyframes playX {
+            from {
+               background-position-x: 0%;
+            }
+
+            to {
+               background-position-x: 112.5%;
+            }
+         }
+
+         @keyframes playY {
+            0% {
+               background-position-y: 0%;
+            }
+
+            100% {
+               background-position-y: 200%;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="anim"></div>
+   </body>
+</html>
