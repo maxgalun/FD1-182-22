@@ -1,0 +1,137 @@
+$white: #fff;
+$black: #000;
+$grey: #727272;
+$pink: #f46d69;
+
+@mixin row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+body {
+   font-family: "Noto Sans", Arial, sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   scroll-behavior: smooth;
+   background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+}
+
+.layout {
+   min-height: 100vh;
+   color: $black;
+   background-color: $white;
+}
+
+.container {
+   max-width: 1136px;
+   height: 100%;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.header-top {
+   &__content {
+      @include row;
+      height: 56px;
+      gap: 26.5px;
+   }
+}
+
+.logo {
+   &__link {
+      @include row;
+   }
+
+   &__img {
+      margin-right: 10px;
+   }
+
+   &__title {
+      font-size: 20px;
+      font-weight: 500;
+   }
+}
+
+.info {
+   &__list {
+      @include row;
+      gap: 26.5px;
+   }
+
+   &__link {
+      font-size: 14px;
+      font-weight: 300;
+      color: $grey;
+   }
+}
+
+.header-menu {
+   background-color: #ededed;
+
+   &__content {
+      @include row;
+      height: 56px;
+      gap: 26.5px;
+   }
+
+   &__button {
+      @include row;
+      justify-content: center;
+      min-width: 244px;
+      height: 100%;
+      background-color: $pink;
+   }
+
+   &__button-icon {
+      margin-right: 13px;
+   }
+
+   &__button-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: $white;
+   }
+
+   &__phone {
+      @include row;
+      justify-content: center;
+      min-width: 200px;
+      height: 100%;
+   }
+
+   &__phone-icon {
+      margin-right: 13px;
+   }
+
+   &__phone-title {
+      font-weight: 500;
+      color: $black;
+   }
+
+   &__search {
+      flex: 1;
+      background-color: $white;
+   }
+
+   &__search-content {
+      padding-left: 40px;
+      background: url(../img/tel.svg) no-repeat left 40px;
+   }
+
+   &__search-input {
+      height: 40px;
+      width: 100%;
+      border-radius: 4px;
+      padding-right: 10px;
+      font-weight: 300;
+   }
+
+   &__auth {
+      width: 268px;
+      height: 50px;
+      border: 1px solid black;
+      background-image: url("../img/Foto.jpg");
+      background-repeat: repeat;
+   }
+}

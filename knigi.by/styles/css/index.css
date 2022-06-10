@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+}
+
+.layout {
+  min-height: 100vh;
+  color: #000;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1136px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-top__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 56px;
+  gap: 26.5px;
+}
+
+.logo__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__img {
+  margin-right: 10px;
+}
+
+.logo__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.info__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 26.5px;
+}
+
+.info__link {
+  font-size: 14px;
+  font-weight: 300;
+  color: #727272;
+}
+
+.header-menu {
+  background-color: #ededed;
+}
+
+.header-menu__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 56px;
+  gap: 26.5px;
+}
+
+.header-menu__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 244px;
+  height: 100%;
+  background-color: #f46d69;
+}
+
+.header-menu__button-icon {
+  margin-right: 13px;
+}
+
+.header-menu__button-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.header-menu__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 200px;
+  height: 100%;
+}
+
+.header-menu__phone-icon {
+  margin-right: 13px;
+}
+
+.header-menu__phone-title {
+  font-weight: 500;
+  color: #000;
+}
+
+.header-menu__search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fff;
+}
+
+.header-menu__search-content {
+  padding-left: 40px;
+  background: url(../img/tel.svg) no-repeat left 40px;
+}
+
+.header-menu__search-input {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  padding-right: 10px;
+  font-weight: 300;
+}
+
+.header-menu__auth {
+  width: 268px;
+  height: 50px;
+  border: 1px solid black;
+  background-image: url("../img/Foto.jpg");
+  background-repeat: repeat;
+}
