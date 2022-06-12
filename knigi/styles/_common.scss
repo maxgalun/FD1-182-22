@@ -2,6 +2,11 @@ $white: #fff;
 $black: #000;
 $grey: #727272;
 $pink: #f46d69;
+$font-size: 16px;
+$font-weight: 400;
+$line-height: 1.5;
+
+$transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
 
 @mixin row {
    display: flex;
@@ -9,10 +14,126 @@ $pink: #f46d69;
    align-items: center;
 }
 
+@mixin menu-hover-effect {
+   transform: scale(1.1);
+}
+
+@mixin link-hover-effect {
+   &__list-item::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0.5px;
+      background: $pink;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: $transition;
+   }
+
+   &__list-item:hover,
+   &__list-item:focus {
+      color: $pink;
+   }
+
+   &__list-item:hover::after,
+   &__list-item:focus::after {
+      height: 2px;
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
+
+@mixin shake {
+   animation: shake 1.2s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+   0% {
+      transform: translate(1px, 1px) rotate(0deg);
+   }
+   10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+   }
+   20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+   }
+   30% {
+      transform: translate(3px, 2px) rotate(0deg);
+   }
+   40% {
+      transform: translate(1px, -1px) rotate(1deg);
+   }
+   50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+   }
+   60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+   }
+   70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+   }
+   80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+   }
+   90% {
+      transform: translate(1px, 2px) rotate(0deg);
+   }
+   100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+   }
+}
+
+@mixin button-hover-effect {
+   &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0.5;
+      filter: blur(30px);
+      transform: translateX(-50%) skewX(-15deg);
+   }
+   &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 30px;
+      top: 0;
+      width: 30px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-50%) skewX(-15deg);
+   }
+   &:hover {
+      background: $pink;
+      cursor: pointer;
+      &:before {
+         transform: translateX(500%) skewX(-15deg);
+         opacity: 0.6;
+         transition: 0.5s;
+      }
+      &:after {
+         transform: translateX(500%) skewX(-15deg);
+         opacity: 1;
+         transition: 0.5s;
+      }
+   }
+}
+
 body {
    font-family: "Noto Sans", Arial, sans-serif;
-   font-size: 16px;
-   font-weight: 400;
+   font-size: $font-size;
+   font-weight: $font-weight;
+   line-height: $line-height;
    scroll-behavior: smooth;
 }
 
@@ -52,21 +173,29 @@ body {
    }
 }
 
-.info {
+.navigation {
    &__list {
       @include row;
       gap: 26.5px;
+   }
+
+   &__list-item {
+      position: relative;
    }
 
    &__link {
       font-size: 14px;
       font-weight: 300;
       color: $grey;
+      transition: $transition;
    }
+
+   @include link-hover-effect;
 }
 
 .header-menu {
    background-color: #ededed;
+   margin-bottom: 25px;
 
    &__content {
       @include row;
@@ -79,10 +208,17 @@ body {
       justify-content: center;
       min-width: 244px;
       height: 100%;
-      background-color: $pink;
       font-size: 18px;
       font-weight: 500;
       color: $white;
+      background-image: linear-gradient(to right, $pink, #fdafad, $pink);
+      background-size: 300% 100%;
+      transition: all 0.4s ease-in-out;
+   }
+
+   &__button:hover {
+      background-position: 100% 0;
+      transition: all 0.4s ease-in-out;
    }
 
    &__button::before {
@@ -100,6 +236,11 @@ body {
       height: 100%;
       font-weight: 500;
       color: $black;
+      transition: $transition;
+   }
+
+   &__phone:hover {
+      @include menu-hover-effect;
    }
 
    &__phone::before {
@@ -109,6 +250,11 @@ body {
       background: url(../../img/phone.svg) no-repeat center;
       background-size: 17px 17px;
       margin-right: 10.5px;
+   }
+
+   &__phone:hover::before {
+      animation: shake 0.8s;
+      animation-iteration-count: infinite;
    }
 
    &__search {
@@ -129,22 +275,16 @@ body {
 
    &__info {
       @include row;
-      gap: 40px;
-      min-width: 268px;
-      height: 100%;
-   }
-
-   &__auth {
-      @include row;
-      justify-content: right;
-      min-width: 140px;
+      justify-content: flex-end;
       gap: 18px;
+      min-width: 268px;
       height: 100%;
    }
 
    &__login {
       @include row;
       justify-content: center;
+      transition: $transition;
    }
 
    &__login::before {
@@ -156,10 +296,16 @@ body {
       margin-right: 10.5px;
    }
 
+   &__login:hover {
+      @include menu-hover-effect;
+   }
+
    &__favorite {
       position: relative;
       @include row;
       justify-content: center;
+      margin-right: 20px;
+      transition: $transition;
    }
 
    &__favorite::before {
@@ -167,7 +313,11 @@ body {
       width: 18px;
       height: 18px;
       background: url(../../img/favorite.svg) no-repeat center;
-      background-size: 16px 14px;
+      background-size: 100% 100%;
+   }
+
+   &__favorite:hover {
+      @include menu-hover-effect;
    }
 
    &__favorite-counter {
@@ -189,6 +339,8 @@ body {
       position: relative;
       @include row;
       justify-content: center;
+      height: 18px;
+      transition: $transition;
    }
 
    &__cart::before {
@@ -196,8 +348,12 @@ body {
       width: 18px;
       height: 18px;
       background: url(../../img/cart.svg) no-repeat center;
-      background-size: 18px 17px;
+      background-size: 100% 100%;
       margin-right: 17px;
+   }
+
+   &__cart:hover {
+      @include menu-hover-effect;
    }
 
    &__cart-counter {
@@ -213,4 +369,155 @@ body {
       color: $white;
       text-align: center;
    }
+}
+
+.header-bottom {
+   &__content {
+      @include row;
+      height: 456px;
+      gap: 16px;
+   }
+
+   &__categories {
+      min-width: 272px;
+      height: 100%;
+      z-index: 20;
+   }
+
+   &__slider {
+      flex: 1;
+      height: 100%;
+      z-index: 10;
+   }
+}
+
+.slider {
+   &__container,
+   &__wrapper {
+      height: 100%;
+      overflow: hidden;
+   }
+
+   &__items {
+      height: 100%;
+   }
+
+   &__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      height: 100%;
+   }
+
+   &__item:nth-child(1) {
+      background: url(../../img/slider_1.jpg) no-repeat;
+      background-size: cover;
+   }
+
+   &__item:nth-child(2) {
+      background: url(../../img/slider_2.jpg) no-repeat;
+      background-size: cover;
+   }
+
+   &__item:nth-child(3) {
+      background: url(../../img/slider_4.jpg) no-repeat;
+      background-size: cover;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 20px;
+      height: 100%;
+      padding: 40px 65px;
+   }
+
+   &__title {
+      font-size: 24px;
+      font-weight: 600;
+      color: $white;
+      text-shadow: 1px 1px 2px black;
+   }
+
+   &__button {
+      position: relative;
+      width: 183px;
+      height: 44px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background: transparent;
+      border: 1px solid white;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: 1.2s;
+   }
+}
+
+.button {
+   position: relative;
+   @include button-hover-effect;
+}
+
+.categories {
+   &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 32px;
+   }
+
+   &__list-item {
+      position: relative;
+      width: 100%;
+      padding-left: 10px;
+   }
+
+   &__link {
+      transition: $transition;
+      display: block;
+   }
+
+   @include link-hover-effect;
+
+   &__list-item:hover .sub-categories {
+      display: block;
+   }
+
+   &__sub-categories {
+      position: absolute;
+      top: 0;
+      left: 287px;
+   }
+}
+
+.sub-categories {
+   opacity: 0;
+   visibility: hidden;
+   background-color: #fff;
+   transform: translateY(50px);
+   transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7);
+   border-radius: 4px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      width: 300px;
+      padding: 5px 15px 10px;
+   }
+
+   &__list-item {
+      font-weight: 300;
+      color: $black;
+   }
+}
+
+.sub-categories--open {
+   transform: translateY(0);
+   opacity: 1;
+   visibility: visible;
 }

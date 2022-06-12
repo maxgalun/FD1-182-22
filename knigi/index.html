@@ -4,13 +4,30 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Книги</title>
+      <title>Твои любимые книги</title>
       <link
          href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
          rel="stylesheet"
       />
+      <!-- ChiefSlider CSS -->
+      <link
+         rel="stylesheet"
+         href="ui-components/ChiefSlider/chief-slider.css"
+      />
+      <!-- ChiefSlider JavaScript -->
+      <script defer src="ui-components/ChiefSlider/chief-slider.js"></script>
       <link rel="stylesheet" href="styles/css/index.css" />
       <link href="img/favicon.ico" rel="shortcut icon" />
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            new ChiefSlider(".slider", {
+               loop: true,
+               autoplay: true,
+               interval: 5000,
+               swipe: true,
+            });
+         });
+      </script>
    </head>
    <body>
       <div class="layout">
@@ -19,45 +36,48 @@
                <div class="container">
                   <div class="header-top__content">
                      <div class="header-top__logo logo">
-                        <a class="logo__link" href="#">
+                        <a class="logo__link" href="/">
                            <img
                               class="logo__img"
                               src="img/logo.svg"
                               alt="logo"
                            />
-                           <span class="logo__title">knigi.by</span>
+                           <h1 class="logo__title">Твои любимые книги</h1>
                         </a>
                      </div>
-                     <nav class="header-top__menu info">
-                        <ul class="info__list">
-                           <li class="info__list-item">
-                              <a class="info__link" href="#">Как заказать</a>
+                     <nav class="header-top__navigation navigation">
+                        <ul class="navigation__list">
+                           <li class="navigation__list-item">
+                              <a class="navigation__link" href="#"
+                                 >Как заказать</a
+                              >
                            </li>
-                           <li class="info__list-item">
-                              <a class="info__link" href="#">Оплата</a>
+                           <li class="navigation__list-item">
+                              <a class="navigation__link" href="#">Оплата</a>
                            </li>
-                           <li class="info__list-item">
-                              <a class="info__link" href="#">Доставка</a>
+                           <li class="navigation__list-item">
+                              <a class="navigation__link" href="#">Доставка</a>
                            </li>
-                           <li class="info__list-item">
-                              <a class="info__link" href="#">Помощь</a>
+                           <li class="navigation__list-item">
+                              <a class="navigation__link" href="#">Помощь</a>
                            </li>
-                           <li class="info__list-item">
-                              <a class="info__link" href="#">Контакты</a>
+                           <li class="navigation__list-item">
+                              <a class="navigation__link" href="#">Контакты</a>
                            </li>
                         </ul>
                      </nav>
                   </div>
                </div>
             </div>
-
             <div class="header-menu">
                <div class="container">
                   <div class="header-menu__content">
                      <button class="header-menu__button">
                         Каталог товаров
                      </button>
-                     <div class="header-menu__phone">+375 (44) 11 22 333</div>
+                     <a href="tel:+375441122333" class="header-menu__phone"
+                        >+375 (44) 11 22 333</a
+                     >
                      <form class="header-menu__search">
                         <input
                            class="header-menu__search-input"
@@ -68,32 +88,181 @@
                         />
                      </form>
                      <div class="header-menu__info">
-                        <div class="header-menu__auth">
-                           <div class="header-menu__login">Elena</div>
-                           <div class="header-menu__favorite">
-                              <div class="header-menu__favorite-counter">2</div>
-                           </div>
-                        </div>
-
-                        <div class="header-menu__cart">
+                        <a
+                           href="#"
+                           class="header-menu__login"
+                           title="Перейти в личный кабинет"
+                           >Elena</a
+                        >
+                        <a
+                           href="#"
+                           class="header-menu__favorite"
+                           title="Перейти в избранное"
+                        >
+                           <div class="header-menu__favorite-counter">2</div>
+                        </a>
+                        <a
+                           href="#"
+                           class="header-menu__cart"
+                           title="Перейти в корзину заказа"
+                        >
                            <div class="header-menu__cart-counter">2</div>
                            <div class="header-menu__cart-cost">33,70 Br</div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="header-bottom">
+               <div class="container">
+                  <div class="header-bottom__content">
+                     <div class="header-bottom__categories categories">
+                        <ul class="categories__list">
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#">Акции</a>
+                              <div
+                                 class="categories__sub-categories sub-categories"
+                              >
+                                 <ul class="sub-categories__list">
+                                    <li class="sub-categories__list-item">
+                                       <a class="sub-categories__link" href="#"
+                                          >Современная литература</a
+                                       >
+                                    </li>
+                                    <li class="sub-categories__list-item">
+                                       <a class="sub-categories__link" href="#"
+                                          >Современная литература</a
+                                       >
+                                    </li>
+                                    <li class="sub-categories__list-item">
+                                       <a class="sub-categories__link" href="#"
+                                          >Современная литература</a
+                                       >
+                                    </li>
+                                    <li class="sub-categories__list-item">
+                                       <a class="sub-categories__link" href="#"
+                                          >Современная литература</a
+                                       >
+                                    </li>
+                                    <li class="sub-categories__list-item">
+                                       <a class="sub-categories__link" href="#"
+                                          >Современная литература</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#"
+                                 >Бизнес литература</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#"
+                                 >Блокноты, ежедневники</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#"
+                                 >Детская литература</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#"
+                                 >Журналы, периодика</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#">Календари</a>
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#">
+                                 Книги на иностранном языке</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#"
+                                 >Комиксы, манга</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#">
+                                 Нехудожественная литература</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#"
+                                 >Художественная литература</a
+                              >
+                           </li>
+                           <li class="categories__list-item">
+                              <a class="categories__link" href="#">
+                                 Учебная литература</a
+                              >
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="header-bottom__slider slider">
+                        <div class="slider__container">
+                           <div class="slider__wrapper">
+                              <div class="slider__items">
+                                 <div class="slider__item">
+                                    <div class="slider__content">
+                                       <h2 class="slider__title">
+                                          А вы уже знаете, какую книгу<br />
+                                          положите под елку?
+                                       </h2>
+                                       <button class="slider__button button">
+                                          Выбрать книгу
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="slider__item">
+                                    <div class="slider__content">
+                                       <h2 class="slider__title">
+                                          Понять себя и всех вокруг:<br />30
+                                          лучших книг по психологии
+                                       </h2>
+                                       <button class="slider__button button">
+                                          Подробнее
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="slider__item">
+                                    <div class="slider__content">
+                                       <h2 class="slider__title">
+                                          Новинки недели!
+                                       </h2>
+                                       <button class="slider__button button">
+                                          Подробнее
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
+                        <a
+                           href="#"
+                           class="slider__control"
+                           data-slide="prev"
+                        ></a>
+                        <a
+                           href="#"
+                           class="slider__control"
+                           data-slide="next"
+                        ></a>
+                        <ol class="slider__indicators">
+                           <li data-slide-to="0"></li>
+                           <li data-slide-to="1"></li>
+                           <li data-slide-to="2"></li>
+                        </ol>
                      </div>
                   </div>
                </div>
             </div>
          </header>
-         <main>
-            <div class="container">
-               <div class="back"></div>
-            </div>
-         </main>
-         <footer>
-            <div class="categories categories--footer">
-               <div class="container"></div>
-            </div>
-         </footer>
       </div>
    </body>
 </html>
