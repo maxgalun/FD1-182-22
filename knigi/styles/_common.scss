@@ -5,8 +5,7 @@ $pink: #f46d69;
 $grey-back: #ededed;
 $font-size: 16px;
 $font-weight: 400;
-$line-height: 1.5;
-
+$line-height: 1.2;
 $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
 
 @mixin row {
@@ -47,7 +46,7 @@ $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
 }
 
 @mixin shake {
-   animation: shake 1.2s;
+   animation: shake 0.8s;
    animation-iteration-count: infinite;
 }
 
@@ -116,16 +115,17 @@ $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
    }
    &:hover {
       background: $pink;
-      cursor: pointer;
+      color: $white;
+
       &:before {
          transform: translateX(500%) skewX(-15deg);
          opacity: 0.6;
-         transition: 0.5s;
+         transition: all 1.2s ease-in-out;
       }
       &:after {
          transform: translateX(500%) skewX(-15deg);
          opacity: 1;
-         transition: 0.5s;
+         transition: all 1.2s ease-in-out;
       }
    }
 }
@@ -141,34 +141,42 @@ $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
    border: 1px solid $grey;
    border-radius: 4px;
    overflow: hidden;
-   transition: 1.2s;
+   transition: all 0.6s ease-in-out;
+}
+
+._container {
+   max-width: 1136px;
+   margin: 0 auto;
+   padding: 0 15px;
+   box-sizing: content-box;
 }
 
 body {
+   height: 100%;
    font-family: "Noto Sans", Arial, sans-serif;
    font-size: $font-size;
    font-weight: $font-weight;
    line-height: $line-height;
+   color: $black;
+   background-color: $white;
    scroll-behavior: smooth;
 }
 
 .layout {
    min-height: 100vh;
-   color: $black;
-   background-color: $white;
+   overflow: hidden;
 }
 
-.container {
-   max-width: 1176px;
-   height: 100%;
-   margin: 0 auto;
-   padding: 0 20px;
+.main {
+   margin-bottom: 50px;
 }
 
 .header-top {
+   height: 1px;
+   min-height: 56px;
    &__content {
+      height: 100%;
       @include row;
-      height: 56px;
       gap: 26.5px;
    }
 }
@@ -176,10 +184,11 @@ body {
 .logo {
    &__link {
       @include row;
+      justify-content: left;
    }
 
    &__img {
-      margin-right: 10px;
+      margin-right: 20px;
    }
 
    &__title {
@@ -200,40 +209,55 @@ body {
 
    &__link {
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 400;
       color: $grey;
       transition: $transition;
    }
 
    @include link-hover-effect;
+
+   &__link:hover {
+      color: $pink;
+   }
 }
 
 .header-menu {
+   height: 1px;
+   min-height: 56px;
    background-color: $grey-back;
    margin-bottom: 25px;
 
    &__content {
+      height: 100%;
       @include row;
       gap: 16px;
-      height: 56px;
+      justify-content: flex-start;
+   }
+
+   &__control {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      gap: 16px;
+      height: 100%;
    }
 
    &__button {
       @include row;
       justify-content: center;
-      min-width: 244px;
+      min-width: 272px;
+      gap: 16px;
       height: 100%;
       font-size: 18px;
       font-weight: 500;
       color: $white;
       background-image: linear-gradient(to right, $pink, #fdafad, $pink);
-      background-size: 300% 100%;
-      transition: all 0.4s ease-in-out;
+      background-size: 600% 100%;
+      transition: all 0.5s ease-in-out;
    }
 
    &__button:hover {
       background-position: 100% 0;
-      transition: all 0.4s ease-in-out;
    }
 
    &__button::before {
@@ -249,7 +273,9 @@ body {
       @include row;
       justify-content: center;
       height: 100%;
+      font-size: 18px;
       font-weight: 500;
+
       color: $black;
       transition: $transition;
    }
@@ -268,13 +294,12 @@ body {
    }
 
    &__phone:hover::before {
-      animation: shake 0.8s;
-      animation-iteration-count: infinite;
+      @include shake();
    }
 
    &__search {
       flex: 1;
-      max-width: 352px;
+      height: 40px;
       background-color: $white;
       border-radius: 4px;
    }
@@ -298,12 +323,17 @@ body {
 
    &__login {
       @include row;
-      justify-content: center;
+      display: block;
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       transition: $transition;
    }
 
    &__login::before {
       content: "";
+      flex-shrink: 0;
       width: 18px;
       height: 18px;
       background: url(../../img/login.svg) no-repeat center;
@@ -327,7 +357,7 @@ body {
       content: "";
       width: 18px;
       height: 18px;
-      background: url(../../img/favorite.svg) no-repeat center;
+      background: url(../../img/favorite-black.svg) no-repeat center;
       background-size: 100% 100%;
    }
 
@@ -362,7 +392,7 @@ body {
       content: "";
       width: 18px;
       height: 18px;
-      background: url(../../img/cart.svg) no-repeat center;
+      background: url(../../img/cart-black.svg) no-repeat center;
       background-size: 100% 100%;
       margin-right: 17px;
    }
@@ -386,12 +416,14 @@ body {
    }
 }
 
-.header-bottom {
+.main-top {
+   height: 1px;
+   min-height: 456px;
    margin-bottom: 30px;
 
    &__content {
       @include row;
-      height: 456px;
+      height: 100%;
       gap: 16px;
    }
 
@@ -402,6 +434,7 @@ body {
    }
 
    &__slider {
+      width: calc(100% - 272px - 16px);
       flex: 1;
       height: 100%;
       z-index: 10;
@@ -409,7 +442,11 @@ body {
 }
 
 .slider {
-   &__container,
+   &__container {
+      height: 100%;
+      overflow: hidden;
+   }
+
    &__wrapper {
       height: 100%;
       overflow: hidden;
@@ -471,8 +508,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 8px;
-      line-height: 32px;
+      gap: 20px;
+      line-height: 20px;
    }
 
    &__list-item {
@@ -527,20 +564,16 @@ body {
    visibility: visible;
 }
 
-.small-filter {
-   height: 88px;
+.selection {
    background-color: $grey-back;
+}
 
-   &__content {
-      display: flex;
-      height: 100%;
-      align-items: center;
-   }
-
+.navigation-bar {
    &__list {
-      display: flex;
-      gap: 50px;
-      font-weight: 300;
+      height: 88px;
+      @include row;
+      justify-content: flex-start;
+      gap: 80px;
    }
 
    &__list-item {
@@ -548,33 +581,37 @@ body {
          font-size: 18px;
          font-weight: 500;
       }
+      &--underline {
+         text-decoration: underline;
+      }
    }
 }
 
-.products {
+.catalog {
    &__list {
       display: grid;
-      justify-content: space-between;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
       gap: 16px;
    }
-
-   &__list-item {
-   }
 }
+
 .product {
+   background-color: $white;
    &__content {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 15px;
+      gap: 16px;
+      padding: 14px 0 20px;
    }
 
-   &__picture {
+   &__link {
+      text-align: center;
    }
 
    &__description {
+      display: flex;
+      flex-direction: column;
+      padding: 0 16px;
    }
 
    &__title {
@@ -585,12 +622,10 @@ body {
    &__author {
       font-size: 12px;
       font-weight: 300;
+      margin-bottom: 10px;
    }
 
-   &__rating {
-   }
-
-   &__botoom {
+   &__bottom {
       display: flex;
       justify-content: space-between;
    }
@@ -615,56 +650,59 @@ body {
       font-weight: 500;
    }
 
-   &__favorite {
+   &__favorite-checkbox {
+      visibility: hidden;
       position: relative;
       @include row;
       justify-content: center;
+      width: 32px;
+      height: 32px;
+      transition: $transition;
+      cursor: pointer;
+   }
+
+   &__favorite-checkbox::before {
+      content: "";
+      visibility: visible;
       width: 32px;
       height: 32px;
       border-radius: 4px;
-      transition: $transition;
+      background: url(../../img/favorite-grey.svg) no-repeat center;
+      background-color: $grey-back;
    }
 
-   &__favorite::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      background: url(../../img/favorite_grey.svg) no-repeat center;
-   }
-
-   &__favorite--selected::before {
-      filter: brightness(0.5) invert(1);
-   }
-
-   &__favorite--selected {
+   &__favorite-checkbox:checked::before {
+      background: url(../../img/favorite-white.svg) no-repeat center;
       background-color: $pink;
    }
 
-   &__cart {
+   &__cart-checkbox {
+      visibility: hidden;
       position: relative;
       @include row;
       justify-content: center;
       width: 32px;
       height: 32px;
       transition: $transition;
+      cursor: pointer;
    }
 
-   &__cart--selected {
+   &__cart-checkbox::before {
+      content: "";
+      visibility: visible;
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      background: url(../../img/cart-grey.svg) no-repeat center;
+      background-color: $grey-back;
+   }
+
+   &__cart-checkbox:checked::before {
+      background: url(../../img/cart-white.svg) no-repeat center;
       background-color: $pink;
    }
 
-   &__cart::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      background: url(../../img/cart_grey.svg) no-repeat center;
-   }
-
-   &__cart--selected::before {
-      filter: brightness(0.5) invert(1);
-   }
-
-   &__buttons {
+   &__control {
       display: flex;
       gap: 8px;
    }
@@ -689,6 +727,10 @@ body {
       width: 60px;
    }
 
+   &__stars--45::before {
+      width: 54px;
+   }
+
    &__stars--40::before {
       width: 48px;
    }
@@ -709,6 +751,7 @@ body {
 .subscribe {
    height: 88px;
    background-color: $grey-back;
+   margin-bottom: 20px;
 
    &__content {
       display: flex;
@@ -718,7 +761,7 @@ body {
       justify-content: center;
    }
 
-   &__subscribe__title {
+   &__title {
       font-size: 18px;
       font-weight: 500;
       color: #727272;
@@ -726,5 +769,85 @@ body {
 
    &__button {
       @include button(166px, 44px);
+      color: $grey;
+   }
+}
+
+.articles {
+   &__list {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__list-item {
+      width: 25%;
+   }
+}
+
+.article {
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+   }
+
+   &__title {
+      font-size: 16px;
+   }
+
+   &__subtitle {
+      font-weight: 300;
+   }
+}
+
+.map {
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      font-weight: 500;
+      margin-bottom: 20px;
+   }
+
+   &__link {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 300;
+   }
+
+   &__row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+}
+
+.social {
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+}
+
+.app {
+   &__link {
+      display: block;
+      margin-bottom: 5px;
+   }
+}
+
+.copyright {
+   &__title {
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
    }
 }

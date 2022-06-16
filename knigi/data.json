@@ -1,0 +1,207 @@
+[
+   {
+      "id": 1,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/1.jpg"
+   },
+   {
+      "id": 2,
+      "title": "Заживо в темноте",
+      "author": "Майк Омер, 2020",
+      "rating": "45",
+      "price": "15.50",
+      "preprice": "17.80",
+      "image": "/img/catalog/2.jpg"
+   },
+   {
+      "id": 3,
+      "title": "Внутри убийцы",
+      "author": "Майк Омер, 2020",
+      "rating": "50",
+      "price": "19.50",
+      "preprice": "",
+      "image": "/img/catalog/3.jpg"
+   },
+   {
+      "id": 4,
+      "title": "Безмолвный пациент",
+      "author": "Алекс Михаэлидес, 2019",
+      "rating": "45",
+      "price": "17.20",
+      "preprice": "",
+      "image": "/img/catalog/4.jpg"
+   },
+   {
+      "id": 5,
+      "title": "Пассажиры",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "13.20",
+      "preprice": "",
+      "image": "/img/catalog/5.jpg"
+   },
+
+   {
+      "id": 6,
+      "title": "Смерть на Ниле",
+      "author": "Агата Кристи, 2020",
+      "rating": "50",
+      "price": "18.40",
+      "preprice": "",
+      "image": "/img/catalog/6.jpg"
+   },
+
+   {
+      "id": 7,
+      "title": "Безупречная репутация. Том 2",
+      "author": "Александра Маринина, 2020",
+      "rating": "50",
+      "price": "17.90",
+      "preprice": "",
+      "image": "/img/catalog/7.jpg"
+   },
+
+   {
+      "id": 8,
+      "title": "Дурная кровь",
+      "author": "Джоан Роулинг, 2020",
+      "rating": "45",
+      "price": "32.50",
+      "preprice": "",
+      "image": "/img/catalog/8.jpg"
+   },
+
+   {
+      "id": 9,
+      "title": "Шепот за окном",
+      "author": "Алекс Норт, 2020",
+      "rating": "50",
+      "price": "17.60",
+      "preprice": "",
+      "image": "/img/catalog/9.jpg"
+   },
+
+   {
+      "id": 10,
+      "title": "Щегол",
+      "author": "Донна Тартт, 2019",
+      "rating": "50",
+      "price": "37.50",
+      "preprice": "",
+      "image": "/img/catalog/10.jpg"
+   },
+
+   {
+      "id": 11,
+      "title": "Королевство",
+      "author": "Ю Несбе, 2020",
+      "rating": "50",
+      "price": "17.20",
+      "preprice": "",
+      "image": "/img/catalog/11.jpg"
+   },
+
+   {
+      "id": 12,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/12.jpg"
+   },
+
+   {
+      "id": 13,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/13.jpg"
+   },
+
+   {
+      "id": 14,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/14.jpg"
+   },
+
+   {
+      "id": 15,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/15.jpg"
+   },
+
+   {
+      "id": 16,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/16.jpg"
+   },
+
+   {
+      "id": 17,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/17.jpg"
+   },
+
+   {
+      "id": 18,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/18.jpg"
+   },
+
+   {
+      "id": 19,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/19.jpg"
+   },
+
+   {
+      "id": 20,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/20.jpg"
+   },
+
+   {
+      "id": 20,
+      "title": "The One. Единственный",
+      "author": "Джон Маррс, 2020",
+      "rating": "50",
+      "price": "22.50",
+      "preprice": "",
+      "image": "/img/catalog/20.jpg"
+   }
+]
