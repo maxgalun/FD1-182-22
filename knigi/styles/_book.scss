@@ -1,0 +1,338 @@
+.breadcrumbs {
+   margin-bottom: 50px;
+   &__list-item {
+      display: inline-block;
+      font-size: 12px;
+      color: $grey;
+
+      &--current {
+         color: $black;
+      }
+   }
+
+   &__list {
+      & > li + li:before {
+         content: "";
+         display: inline-block;
+         width: 5px;
+         height: 11px;
+         margin: 0 8px;
+         background-image: url(../../img/separator.svg);
+         background-repeat: no-repeat;
+         background-position: 50%;
+         background-size: cover;
+      }
+   }
+}
+
+.product-card {
+   height: 100%;
+   width: 100%;
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $border-color;
+   }
+
+   &__pictures {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__reading {
+      width: 354px;
+      height: 156px;
+      border: 1px solid black;
+   }
+
+   &__description {
+      width: calc(100% - 448px - 16px);
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__main-info {
+      margin-bottom: 20px;
+   }
+
+   &__availability {
+      margin-bottom: 20px;
+   }
+
+   &__summary {
+      position: relative;
+   }
+}
+
+.summary {
+   flex: 1;
+   padding: 20px 25px;
+   font-size: 14px;
+   font-weight: 300px;
+   border: 1px solid $border-color;
+   border-radius: 4px;
+   margin-bottom: 16px;
+
+   &__text {
+      padding-right: 60px;
+      line-height: 24px;
+   }
+
+   &__link {
+      white-space: nowrap;
+      text-decoration: underline;
+   }
+}
+
+.availability {
+   &__description {
+      font-weight: 300;
+      margin-bottom: 16px;
+   }
+
+   &__control {
+      display: flex;
+      gap: 5px;
+   }
+
+   &__control {
+      display: flex;
+      gap: 5px;
+   }
+
+   &__cart {
+      @include button(225px, 44px);
+      background-color: $pink;
+      color: $white;
+      border: none;
+   }
+
+   &__favorite {
+      width: 44px;
+
+      &::before {
+         width: 44px;
+         height: 44px;
+      }
+   }
+}
+
+.pages {
+   text-align: center;
+
+   &__title {
+      font-weight: 300;
+      margin-bottom: 30px;
+      &::before {
+         content: "";
+         display: inline-block;
+         width: 27px;
+         height: 20px;
+         background: url(../../img/book.svg) no-repeat;
+         vertical-align: bottom;
+         margin-right: 5px;
+      }
+   }
+
+   &__title-link {
+      text-decoration: underline;
+   }
+
+   &__list {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+   }
+
+   &__list-item {
+      border: 1px solid $grey-back;
+      border-radius: 4px;
+   }
+
+   &__picture {
+      border-radius: 4px;
+   }
+}
+
+.main-info {
+   padding-bottom: 25px;
+   border-bottom: 1px solid $border-color;
+
+   &__title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+   }
+   &__code {
+      font-size: initial;
+      font-weight: 300;
+   }
+
+   &__author {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 24px;
+   }
+
+   &__catalog-selection {
+      font-size: initial;
+      font-weight: 300;
+   }
+
+   &__rating {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+   }
+
+   &__review {
+      font-weight: 300;
+      text-decoration: underline;
+   }
+   &__cost {
+      font-size: 24px;
+      font-weight: 600;
+   }
+}
+
+.add-info {
+   &__content {
+   }
+
+   &__title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+   }
+
+   &__description {
+      display: grid;
+      grid-template-columns: auto auto;
+      row-gap: 10px;
+   }
+
+   &__key {
+   }
+
+   &__value {
+      font-weight: 300;
+   }
+
+   &__link {
+      text-decoration: underline;
+   }
+}
+
+.reviews-selection {
+   &__content {
+      padding-bottom: 40px;
+   }
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 70px;
+      padding: 0 70px;
+   }
+
+   &__list-item {
+      width: 50%;
+   }
+
+   &__title-list {
+      display: flex;
+      height: 88px;
+      gap: 24px;
+      align-items: center;
+   }
+
+   &__reviews-link {
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: underline;
+   }
+
+   &__add-review-link {
+      font-weight: 300;
+      text-decoration: underline;
+   }
+}
+
+.review {
+   font-weight: 300;
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+   }
+
+   &__text {
+      max-height: 120px;
+      overflow: hidden;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+   }
+   &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__read-all-link {
+      text-decoration: underline;
+
+      &::before {
+         content: "";
+         display: inline-block;
+         width: 23px;
+         height: 14px;
+         background: url(../../img/eye.svg) no-repeat;
+         background-position: center center;
+         margin-right: 7px;
+         vertical-align: middle;
+      }
+   }
+
+   &__like {
+      margin-right: 20px;
+      &::before {
+         content: "";
+         display: inline-block;
+         width: 18px;
+         height: 18px;
+         background: url(../../img/like.svg) no-repeat;
+         background-position: center center;
+         margin-right: 7px;
+         vertical-align: middle;
+      }
+   }
+
+   &__comments {
+      &::before {
+         content: "";
+         display: inline-block;
+         width: 22px;
+         height: 17px;
+         background: url(../../img/comment.svg) no-repeat;
+         background-position: center center;
+         margin-right: 7px;
+         vertical-align: middle;
+      }
+   }
+}
