@@ -1,0 +1,157 @@
+.title {
+   &__text {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 40px;
+   }
+}
+
+.description {
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+   }
+
+   &__order-list {
+      width: 66.66%;
+   }
+
+   &__order-list-item {
+      border-bottom: 1px solid $border-color;
+   }
+
+   &__summary {
+      width: 33.33%;
+      align-self: flex-start;
+   }
+}
+
+.order {
+   &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+   }
+
+   &__description {
+      display: flex;
+   }
+
+   &__counter {
+      display: flex;
+      align-items: center;
+   }
+
+   &__favorite {
+      width: 40px;
+      height: 40px;
+      &::before {
+         width: 40px;
+         height: 40px;
+      }
+   }
+
+   &__remove {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: url(../../img/trashcan.svg) no-repeat;
+      background-color: $grey-back;
+      background-position: center;
+      border-radius: 4px;
+   }
+}
+
+.product {
+   &__title {
+      font-weight: 400;
+   }
+
+   &__author {
+      font-size: 14px;
+   }
+
+   &__state {
+      font-weight: 300;
+      font-size: 12px;
+   }
+
+   &__description {
+      justify-content: center;
+      gap: 8px;
+   }
+}
+
+.counter {
+   &__content {
+      display: flex;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+   }
+
+   &__amount {
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      font-weight: 500;
+   }
+
+   &__decrement,
+   &__increment {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      font-weight: 300;
+   }
+}
+
+.order-summary {
+   border-radius: 4px;
+
+   &__content {
+      min-height: 350px;
+      background-color: $grey-back;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px 30px;
+   }
+
+   &__title {
+      font-size: 18px;
+      font-weight: 500;
+   }
+
+   &__description {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 35px;
+      row-gap: 10px;
+   }
+
+   &__value {
+      font-weight: 300;
+   }
+
+   &__link {
+      text-decoration: underline;
+   }
+
+   &__cost {
+      font-weight: 600;
+   }
+
+   &__note {
+      font-size: 12px;
+      font-weight: 300;
+   }
+
+   &__button {
+      @include button(260px, 44px);
+      background-color: $pink;
+      color: $white;
+   }
+}

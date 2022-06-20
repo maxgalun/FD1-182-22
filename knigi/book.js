@@ -79,7 +79,7 @@ function fillRecently(catalog, elementId, length) {
       innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[random].id}">
                         <div class="product__content">
                            <a class="product__link" href="#">
-                              <img class="product__picture product__picture--no-transform" src="${catalog[random].image}" title="${catalog[random].title}" width="104">
+                              <img class="product__picture product__picture--no-transform" src="${catalog[random].image}" title="${catalog[random].title}" width="136">
                            </a>
                         </div>
                      </li>`;

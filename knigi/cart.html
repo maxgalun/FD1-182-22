@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Твои книги - корзина заказа</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <link
+         href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="styles/css/index.css" />
+      <link href="img/favicon.ico" rel="shortcut icon" />
+   </head>
+
+   <body>
+      <div class="layout">
+         <header class="header">
+            <div class="header__top header-top">
+               <div class="header-top__content _container">
+                  <div class="header-top__logo logo">
+                     <a class="logo__link" href="/">
+                        <img class="logo__img" src="img/logo.svg" alt="logo" />
+                        <h1 class="logo__title">Твои книги</h1>
+                     </a>
+                  </div>
+                  <a href="tel:+375441122333" class="header-menu__phone"
+                     >+375 (29) 777 88 77</a
+                  >
+                  <nav class="header-top__navigation navigation">
+                     <ul class="navigation__list">
+                        <li class="navigation__list-item">
+                           <a class="navigation__link" href="#">Как заказать</a>
+                        </li>
+                        <li class="navigation__list-item">
+                           <a class="navigation__link" href="#">Оплата</a>
+                        </li>
+                        <li class="navigation__list-item">
+                           <a class="navigation__link" href="#">Доставка</a>
+                        </li>
+                        <li class="navigation__list-item">
+                           <a class="navigation__link" href="#">Помощь</a>
+                        </li>
+                        <li class="navigation__list-item">
+                           <a class="navigation__link" href="#">Контакты</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class="header__menu header-menu">
+               <div class="header-menu__content _container">
+                  <button class="header-menu__button">Каталог товаров</button>
+                  <div class="header-menu__control">
+                     <form class="header-menu__search">
+                        <input
+                           class="header-menu__search-input"
+                           type="search"
+                           name="search"
+                           id="search"
+                           placeholder="Поиск"
+                        />
+                     </form>
+
+                     <div class="header-menu__info">
+                        <a
+                           href="#"
+                           class="header-menu__login"
+                           title="Перейти в личный кабинет"
+                           >Александр Сергеевич
+                        </a>
+                        <a
+                           href="#"
+                           class="header-menu__favorite"
+                           title="Перейти в избранное"
+                        >
+                           <div
+                              class="header-menu__favorite-counter"
+                              data-favorite-counter
+                           >
+                              2
+                           </div>
+                        </a>
+                        <a
+                           href="#"
+                           class="header-menu__cart"
+                           title="Перейти в корзину заказа"
+                        >
+                           <div
+                              class="header-menu__cart-counter"
+                              data-cart-counter
+                           >
+                              2
+                           </div>
+                           <div class="header-menu__cart-cost" data-cart-cost>
+                              33,70 Br
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <main class="main">
+            <div class="title _container">
+               <h2 class="title__text">Корзина</h2>
+            </div>
+            <div class="description">
+               <div class="description__content _container">
+                  <ul class="description__list">
+                     <ul class="description__order-list">
+                        <li class="description__order-list-item order">
+                           <div class="order__content">
+                              <div class="order__description product">
+                                 <a href="/book.html">
+                                    <img
+                                       src="/img/catalog/1.jpg"
+                                       class="product__picture product__picture--no-transform"
+                                       alt="fff"
+                                       width="140"
+                                    />
+                                 </a>
+
+                                 <div class="product__description">
+                                    <div class="product__title">
+                                       The One. Единственный
+                                    </div>
+                                    <div class="product__author">
+                                       Джон Маррс, 2020
+                                    </div>
+                                    <div class="product__state">на складе</div>
+                                 </div>
+                              </div>
+                              <div class="order__counter counter">
+                                 <div class="counter__content">
+                                    <button class="counter__decrement">
+                                       –
+                                    </button>
+                                    <input
+                                       class="counter__amount"
+                                       type="text"
+                                       maxlength="2"
+                                       value="1"
+                                    />
+                                    <button class="counter__increment">
+                                       +
+                                    </button>
+                                 </div>
+                              </div>
+                              <div class="order__cost">16,50 руб.</div>
+                              <div class="order__control">
+                                 <input
+                                    type="checkbox"
+                                    name="favorite"
+                                    class="order__favorite favorite"
+                                 />
+                                 <button class="order__remove"></button>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="description__order-list-item order">
+                           <div class="order__content">
+                              <div class="order__description product">
+                                 <a href="/book.html">
+                                    <img
+                                       src="/img/catalog/1.jpg"
+                                       class="product__picture product__picture--no-transform"
+                                       alt="fff"
+                                       width="140"
+                                    />
+                                 </a>
+
+                                 <div class="product__description">
+                                    <div class="product__title">
+                                       The One. Единственный
+                                    </div>
+                                    <div class="product__author">
+                                       Джон Маррс, 2020
+                                    </div>
+                                    <div class="product__state">на складе</div>
+                                 </div>
+                              </div>
+                              <div class="order__counter counter">
+                                 <div class="counter__content">
+                                    <button class="counter__decrement">
+                                       –
+                                    </button>
+                                    <input
+                                       class="counter__amount"
+                                       type="text"
+                                       maxlength="2"
+                                       value="1"
+                                    />
+                                    <button class="counter__increment">
+                                       +
+                                    </button>
+                                 </div>
+                              </div>
+                              <div class="order__cost">16,50 руб.</div>
+                              <div class="order__control">
+                                 <input
+                                    type="checkbox"
+                                    name="favorite"
+                                    class="order__favorite favorite"
+                                 />
+                                 <button class="order__remove"></button>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                     <li class="description__summary order-summary">
+                        <div class="order-summary__content">
+                           <div class="order-summary__title">Ваш заказ</div>
+                           <ul class="order-summary__description">
+                              <li class="order-summary__key">
+                                 2 товара на сумму
+                              </li>
+                              <li
+                                 class="order-summary__value order-summary__cost"
+                              >
+                                 33,70 руб.
+                              </li>
+                              <li class="order-summary__key">
+                                 <a class="order-summary__link" href=""
+                                    >Ввести промокод</a
+                                 >
+                              </li>
+                              <li class="order-summary__value"></li>
+                              <li class="order-summary__key">Скидка</li>
+                              <li class="order-summary__value">0 руб.</li>
+                              <li
+                                 class="order-summary__key order-summary__cost"
+                              >
+                                 Общая стоимость
+                              </li>
+                              <li
+                                 class="order-summary__value order-summary__cost"
+                              >
+                                 33,70 руб.
+                              </li>
+                           </ul>
+
+                           <div class="order-summary__note">
+                              Доступные способы доставки и время можно выбрать
+                              при оформлении заказа.
+                           </div>
+
+                           <button class="order-summary__button button">
+                              Перейти к оформлению
+                           </button>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </main>
+         <footer class="footer">
+            <div class="footer-navigation">
+               <div class="footer-navigation__content _container">
+                  <ul class="footer-navigation__list">
+                     <li class="footer-navigation__list-item">
+                        <div class="footer-navigation__title">
+                           Связаться с нами
+                        </div>
+                        <a
+                           href="tel:+375 (44) 11 22 333"
+                           class="footer-navigation__link"
+                           >+375 (44) 11 22 333</a
+                        >
+                        <a
+                           href="tel:+375 (29) 11 22 333"
+                           class="footer-navigation__link"
+                           >+375 (29) 11 22 333</a
+                        >
+                        <a
+                           href="https://goo.gl/maps/ddVHEMbKtRiLrWdUA"
+                           target="_blank"
+                           class="footer-navigation__link"
+                           >г. Минск, пр-т Независимости, 20</a
+                        >
+                        <a
+                           href="mailto:kniga.by@mail.ru"
+                           class="footer-navigation__link"
+                           >kniga.by@mail.ru</a
+                        >
+                     </li>
+
+                     <li class="footer-navigation__list-item">
+                        <div class="footer-navigation__title">О нас</div>
+                        <a href="#" class="footer-navigation__link"
+                           >Как заказать</a
+                        >
+                        <a href="#" class="footer-navigation__link">Доставка</a>
+                        <a href="#" class="footer-navigation__link"
+                           >Самовывоз</a
+                        >
+                        <a href="#" class="footer-navigation__link">Оплата</a>
+                     </li>
+
+                     <li class="footer-navigation__list-item">
+                        <div class="footer-navigation__title">Полезно</div>
+                        <a href="#" class="footer-navigation__link"
+                           >Возврат товара</a
+                        >
+                        <a href="#" class="footer-navigation__link"
+                           >Правила продажи</a
+                        >
+                        <a href="#" class="footer-navigation__link"
+                           >Возврат средств</a
+                        >
+                        <a href="#" class="footer-navigation__link"
+                           >Рассылка новостей</a
+                        >
+                     </li>
+
+                     <li class="footer-navigation__list-item">
+                        <div class="footer-navigation__title">Помощь</div>
+                        <a href="#" class="footer-navigation__link"
+                           >Политика конфидициальности</a
+                        >
+                        <a href="#" class="footer-navigation__link"
+                           >Правила размещения комментариев</a
+                        >
+                        <a href="#" class="footer-navigation__link"
+                           >Договор продажи</a
+                        >
+                     </li>
+
+                     <li
+                        class="footer-navigation__list-item footer-navigation__social"
+                     >
+                        <div class="social">
+                           <ul class="social__list">
+                              <li class="social__list-item">
+                                 <a class="social__link" href="#"
+                                    ><img
+                                       class="social__icon"
+                                       src="img/fb.svg"
+                                       alt="facebook"
+                                       width="32"
+                                       height="32"
+                                 /></a>
+                              </li>
+                              <li class="social__list-item">
+                                 <a class="social__link" href="#"
+                                    ><img
+                                       class="social__icon"
+                                       src="img/instagram.svg"
+                                       alt="instagram"
+                                       width="32"
+                                       height="32"
+                                 /></a>
+                              </li>
+                              <li class="social__list-item">
+                                 <a class="social__link" href="#"
+                                    ><img
+                                       class="social__icon"
+                                       src="img/twitter.svg"
+                                       alt="twitter"
+                                       width="32"
+                                       height="32"
+                                 /></a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="app">
+                           <a class="app__link" href="#">
+                              <img
+                                 class="app__icon"
+                                 src="img/Google-play.svg"
+                                 alt="Google-play"
+                                 width="112"
+                              />
+                           </a>
+                           <a class="app__link" href="#">
+                              <img
+                                 class="app__icon"
+                                 src="img/Apple-store.svg"
+                                 alt="Apple-store"
+                                 width="112"
+                              />
+                           </a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="copyright__content _container">
+                  <div class="copyright__title">© All Rights Reserved</div>
+               </div>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
