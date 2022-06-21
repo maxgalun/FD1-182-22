@@ -30,19 +30,35 @@
    width: 100%;
 
    &__content {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
+      display: grid;
+      gap: 20px;
+      grid-template-areas:
+         "picture title"
+         "picture description";
       padding-bottom: 40px;
       border-bottom: 1px solid $border-color;
+
+      @media all and (max-width: 1000px) {
+         grid-template-areas:
+            "title"
+            "picture"
+            "description";
+      }
    }
 
    &__pictures {
+      grid-area: picture;
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: center;
       justify-content: space-between;
+   }
+
+   &__picture {
+      @media all and (max-width: 1000px) {
+         width: 70%;
+      }
    }
 
    &__reading {
@@ -52,9 +68,13 @@
    }
 
    &__description {
-      width: calc(100% - 448px - 16px);
+      grid-area: description;
       display: flex;
       flex-direction: column;
+   }
+
+   &__title {
+      grid-area: title;
    }
 
    &__main-info {
@@ -99,11 +119,10 @@
    &__control {
       display: flex;
       gap: 5px;
-   }
 
-   &__control {
-      display: flex;
-      gap: 5px;
+      @media all and (max-width: 1000px) {
+         justify-content: center;
+      }
    }
 
    &__cart {
@@ -146,8 +165,9 @@
 
    &__list {
       display: flex;
+      flex-wrap: wrap;
       gap: 16px;
-      justify-content: space-between;
+      justify-content: center;
    }
 
    &__list-item {
@@ -170,6 +190,7 @@
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 16px;
+      gap: 10px;
    }
    &__code {
       font-size: initial;
@@ -182,11 +203,13 @@
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 24px;
+      gap: 10px;
    }
 
    &__catalog-selection {
       font-size: initial;
       font-weight: 300;
+      text-align: right;
    }
 
    &__rating {
@@ -216,7 +239,7 @@
    &__description {
       display: grid;
       grid-template-columns: auto auto;
-      row-gap: 10px;
+      gap: 10px;
    }
 
    &__value {
@@ -238,10 +261,21 @@
       justify-content: space-between;
       gap: 70px;
       padding: 0 70px;
+
+      @media all and (max-width: 1000px) {
+         flex-direction: column;
+      }
+
+      @media all and (max-width: 600px) {
+         padding: 0 10px;
+      }
    }
 
    &__list-item {
       width: 50%;
+      @media all and (max-width: 1000px) {
+         width: 100%;
+      }
    }
 
    &__title-list {
@@ -266,6 +300,13 @@
 .review {
    font-weight: 300;
 
+   &__control {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+   }
+
    &__content {
       display: flex;
       flex-direction: column;
@@ -284,6 +325,7 @@
    }
    &__footer {
       display: flex;
+      gap: 10px;
       align-items: center;
       justify-content: space-between;
    }
@@ -304,7 +346,6 @@
    }
 
    &__like {
-      margin-right: 20px;
       &::before {
          content: "";
          display: inline-block;

@@ -752,6 +752,7 @@ body {
 
       &--grid-8_1 {
          grid-template-columns: repeat(auto-fit, 136px);
+         justify-content: center;
       }
 
       &--grid-4_3 {
