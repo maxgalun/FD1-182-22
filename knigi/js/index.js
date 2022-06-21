@@ -1,5 +1,3 @@
-console.log("js");
-
 var favoriteArr = localStorage.getItem("favorite");
 var cartArr = localStorage.getItem("cart");
 
@@ -157,7 +155,6 @@ function checkedControl(arr, id) {
 }
 
 document.addEventListener("click", function (event) {
-   console.log(event.target);
    if (event.target.dataset.favorite != undefined) {
       if (event.target.checked)
          incrementArray(
