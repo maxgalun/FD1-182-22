@@ -455,13 +455,16 @@ body {
       left: 12px;
       width: 18px;
       height: 18px;
-      border-radius: 50%;
       line-height: 18px;
       font-size: 12px;
       font-weight: 400;
-      background-color: $pink;
       color: $white;
       text-align: center;
+   }
+
+   &__favorite-counter-value {
+      background-color: $pink;
+      border-radius: 50%;
    }
 
    &__cart {
@@ -491,12 +494,15 @@ body {
       left: 12px;
       width: 18px;
       height: 18px;
-      border-radius: 50%;
       line-height: 18px;
       font-size: 12px;
-      background-color: $pink;
       color: $white;
       text-align: center;
+   }
+
+   &__cart-counter-value {
+      background-color: $pink;
+      border-radius: 50%;
    }
 
    &__cart-cost {

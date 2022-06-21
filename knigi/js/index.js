@@ -213,6 +213,8 @@ function updateLocalStorage(array) {
 }
 
 function updateCounter(dataAttr, array) {
-   document.querySelector(`[data-${dataAttr}-counter]`).innerText =
-      array.length;
+   array.length == 0
+      ? (document.querySelector(`[data-${dataAttr}-counter]`).innerText = "")
+      : (document.querySelector(`[data-${dataAttr}-counter]`).innerText =
+           array.length);
 }

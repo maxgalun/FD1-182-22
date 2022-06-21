@@ -241,6 +241,9 @@
 .product {
    &__content--row {
       flex-direction: row;
+      @media all and (max-width: 550px) {
+         flex-direction: column;
+      }
    }
 
    &__description--row {
