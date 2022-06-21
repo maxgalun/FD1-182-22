@@ -745,24 +745,24 @@ body {
 
    &__list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
       gap: 16px;
 
       &--grid-4_1 {
-         grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+         grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
       }
 
       &--grid-3_1 {
-         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
 
       &--grid-8_1 {
-         grid-template-columns: repeat(auto-fit, 136px);
+         grid-template-columns: repeat(auto-fill, 136px);
          justify-content: center;
       }
 
       &--grid-4_3 {
-         grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+         grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
          grid-template-rows: repeat(3, 1fr);
       }
    }
@@ -1066,7 +1066,7 @@ body {
 
    &__list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
       gap: 16px;
    }
 }
