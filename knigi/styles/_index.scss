@@ -7,7 +7,7 @@ $border-color: #e8e8e8;
 $font-size: 16px;
 $font-weight: 400;
 $line-height: 1.2;
-$transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
+$transition: all 0.2s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
 
 @mixin row {
    display: flex;
@@ -25,7 +25,7 @@ $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
       position: absolute;
       top: 100%;
       left: 0;
-      width: 90%;
+      width: 100%;
       height: 0.5px;
       background: $pink;
       opacity: 0;
@@ -42,7 +42,7 @@ $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
    &__list-item:focus::after {
       height: 2px;
       opacity: 1;
-      transform: translateY(-10px);
+      transform: translateY(0px);
    }
 }
 
@@ -55,35 +55,38 @@ $transition: all 0.1s cubic-bezier(0.22, 0.7, 0.21, 0.7) 0s;
    0% {
       transform: translate(1px, 1px) rotate(0deg);
    }
-   10% {
+   5% {
       transform: translate(-1px, -2px) rotate(-1deg);
    }
-   20% {
+   10% {
       transform: translate(-3px, 0px) rotate(1deg);
    }
-   30% {
+   15% {
       transform: translate(3px, 2px) rotate(0deg);
    }
-   40% {
+   20% {
       transform: translate(1px, -1px) rotate(1deg);
    }
-   50% {
+   25% {
       transform: translate(-1px, 2px) rotate(-1deg);
    }
-   60% {
+   30% {
       transform: translate(-3px, 1px) rotate(0deg);
    }
-   70% {
+   35% {
       transform: translate(3px, 1px) rotate(-1deg);
    }
-   80% {
+   40% {
       transform: translate(-1px, -1px) rotate(1deg);
    }
-   90% {
+   45% {
       transform: translate(1px, 2px) rotate(0deg);
    }
-   100% {
+   50% {
       transform: translate(1px, -2px) rotate(-1deg);
+   }
+   100% {
+      transform: translate(0px, 0px) rotate(0deg);
    }
 }
 
@@ -326,15 +329,6 @@ body {
       border-radius: 4px;
    }
 
-   &__search-input {
-      width: 100%;
-      height: 40px;
-      padding: 0 10px 0 40px;
-      font-weight: 300;
-      background: url(../../img/search.svg) no-repeat 13px 50%;
-      background-size: 15px 15px;
-   }
-
    &__info {
       @include row;
       justify-content: flex-end;
@@ -438,6 +432,17 @@ body {
    }
 }
 
+.search {
+   &__input {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px 0 40px;
+      font-weight: 300;
+      background: url(../../img/search.svg) no-repeat 13px 50%;
+      background-size: 15px 15px;
+   }
+}
+
 .main-top {
    height: 456px;
 
@@ -503,17 +508,17 @@ body {
 
 .slide-menu {
    &:nth-child(1) {
-      background: url(../../img/slider/slider_1.jpg) no-repeat;
+      background: url(../../img/slider/slider_1.webp) no-repeat;
       background-size: cover;
    }
 
    &:nth-child(2) {
-      background: url(../../img/slider/slider_2.jpg) no-repeat;
+      background: url(../../img/slider/slider_2.webp) no-repeat;
       background-size: cover;
    }
 
    &:nth-child(3) {
-      background: url(../../img/slider/slider_3.jpg) no-repeat;
+      background: url(../../img/slider/slider_3.webp) no-repeat;
       background-size: cover;
    }
 }
@@ -534,8 +539,8 @@ body {
    &__list-item {
       position: relative;
       width: 100%;
-      cursor: pointer;
       padding-bottom: 20px;
+      cursor: pointer;
    }
 
    &__link {
@@ -545,12 +550,22 @@ body {
 
    @include link-hover-effect;
 
+   &__list-item::after {
+      width: 90%;
+      transform: translateY(-20px);
+   }
+
+   &__list-item:hover::after,
+   &__list-item:focus::after {
+      transform: translateY(-10px);
+   }
+
    &__list-item:hover {
       width: 110%;
    }
 
    &__list-item:hover .sub-categories {
-      transform: translateY(0px);
+      transform: translateX(0px);
       opacity: 1;
       visibility: visible;
    }
@@ -566,7 +581,7 @@ body {
    opacity: 0;
    visibility: hidden;
    background-color: #fff;
-   transform: translateY(50px);
+   transform: translateX(-50px);
    transition: all 0.3s cubic-bezier(0.22, 0.7, 0.21, 0.7);
    border-radius: 4px;
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -588,6 +603,15 @@ body {
       &:hover::after {
          width: 100%;
       }
+   }
+
+   &__list-item::after {
+      transform: translateY(-20px);
+   }
+
+   &__list-item:hover::after,
+   &__list-item:focus::after {
+      transform: translateY(-10px);
    }
 }
 
@@ -624,6 +648,10 @@ body {
 
       &--grid-4_1 {
          grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      }
+
+      &--grid-3_1 {
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
 
       &--grid-8_1 {
@@ -682,6 +710,7 @@ body {
    }
 
    &__author {
+      padding-top: 5px;
       font-size: 12px;
       font-weight: 300;
       margin-bottom: 10px;

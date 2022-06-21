@@ -6,7 +6,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/1.jpg"
+      "image": "/img/catalog/1.webp"
    },
    {
       "id": "2",
@@ -15,7 +15,7 @@
       "rating": "45",
       "price": "15.50",
       "preprice": "17.80",
-      "image": "/img/catalog/2.jpg"
+      "image": "/img/catalog/2.webp"
    },
    {
       "id": "3",
@@ -24,7 +24,7 @@
       "rating": "50",
       "price": "19.50",
       "preprice": "",
-      "image": "/img/catalog/3.jpg"
+      "image": "/img/catalog/3.webp"
    },
    {
       "id": "4",
@@ -33,7 +33,7 @@
       "rating": "45",
       "price": "17.20",
       "preprice": "",
-      "image": "/img/catalog/4.jpg"
+      "image": "/img/catalog/4.webp"
    },
    {
       "id": "5",
@@ -42,7 +42,7 @@
       "rating": "50",
       "price": "13.20",
       "preprice": "",
-      "image": "/img/catalog/5.jpg"
+      "image": "/img/catalog/5.webp"
    },
 
    {
@@ -52,7 +52,7 @@
       "rating": "50",
       "price": "18.40",
       "preprice": "",
-      "image": "/img/catalog/6.jpg"
+      "image": "/img/catalog/6.webp"
    },
 
    {
@@ -62,7 +62,7 @@
       "rating": "50",
       "price": "17.90",
       "preprice": "",
-      "image": "/img/catalog/7.jpg"
+      "image": "/img/catalog/7.webp"
    },
 
    {
@@ -72,7 +72,7 @@
       "rating": "45",
       "price": "32.50",
       "preprice": "",
-      "image": "/img/catalog/8.jpg"
+      "image": "/img/catalog/8.webp"
    },
 
    {
@@ -82,7 +82,7 @@
       "rating": "50",
       "price": "17.60",
       "preprice": "",
-      "image": "/img/catalog/9.jpg"
+      "image": "/img/catalog/9.webp"
    },
 
    {
@@ -92,7 +92,7 @@
       "rating": "50",
       "price": "37.50",
       "preprice": "",
-      "image": "/img/catalog/10.jpg"
+      "image": "/img/catalog/10.webp"
    },
 
    {
@@ -102,7 +102,7 @@
       "rating": "50",
       "price": "17.20",
       "preprice": "",
-      "image": "/img/catalog/11.jpg"
+      "image": "/img/catalog/11.webp"
    },
 
    {
@@ -112,7 +112,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/12.jpg"
+      "image": "/img/catalog/12.webp"
    },
 
    {
@@ -122,7 +122,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/13.jpg"
+      "image": "/img/catalog/13.webp"
    },
 
    {
@@ -132,7 +132,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/14.jpg"
+      "image": "/img/catalog/14.webp"
    },
 
    {
@@ -142,7 +142,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/15.jpg"
+      "image": "/img/catalog/15.webp"
    },
 
    {
@@ -152,7 +152,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/16.jpg"
+      "image": "/img/catalog/16.webp"
    },
 
    {
@@ -162,7 +162,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/17.jpg"
+      "image": "/img/catalog/17.webp"
    },
 
    {
@@ -172,7 +172,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/18.jpg"
+      "image": "/img/catalog/18.webp"
    },
 
    {
@@ -182,7 +182,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/19.jpg"
+      "image": "/img/catalog/19.webp"
    },
 
    {
@@ -192,7 +192,7 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/20.jpg"
+      "image": "/img/catalog/20.webp"
    },
 
    {
@@ -202,6 +202,6 @@
       "rating": "50",
       "price": "22.50",
       "preprice": "",
-      "image": "/img/catalog/20.jpg"
+      "image": "/img/catalog/20.webp"
    }
 ]

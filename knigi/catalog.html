@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Твои книги</title>
+      <title>Твои книги - каталог</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
       <link
          href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
@@ -40,7 +40,7 @@
                         <img
                            class="logo__img"
                            src="img/logo.svg"
-                           alt="logo"
+                           alt="логотип"
                            title="логотип"
                         />
                         <h1 class="logo__title">Твои книги</h1>
@@ -470,227 +470,334 @@
                </div>
             </div>
 
-            <div
-               class="main__selection main__selection--grey main__selection--top catalog-selection"
-            >
-               <div class="catalog-selection__content _container">
-                  <div class="catalog-selection__description">
-                     <ul class="catalog-selection__description-list">
-                        <li
-                           class="catalog-selection__description-list-item catalog-selection__description-list-item--active"
-                        >
-                           Популярное
-                        </li>
-                        <li
-                           class="catalog-selection__description-list-item catalog-selection__description-list-item--underline"
-                        >
-                           <a class="navigation-bar__link" href="#"
-                              >Смотреть всё</a
-                           >
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="catalog-selection__catalog catalog">
-                     <div class="catalog__content">
-                        <ul
-                           class="catalog__list catalog__list--grid-4_1"
-                           id="popular-top"
-                        >
-                           <li class="catalog__list-item banner-1"></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <div class="main__catalog main-catalog">
+               <div class="main-catalog__content _container">
+                  <h2 class="main-catalog__title">Каталог</h2>
+                  <div class="main-catalog__inner">
+                     <div class="main-catalog__sidebar sidebar">
+                        <ul class="sidebar__list">
+                           <li class="sidebar__list-item filter">
+                              <div class="filter__title">Категория</div>
+                              <ul class="filter__list">
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Бизнес литература
+                                    </label>
+                                 </li>
 
-            <div class="main__subscribe subscribe">
-               <div class="subscribe__content _container">
-                  <div class="subscribe__title">
-                     Хотите первыми читать наши статьи и узнавать о скидках?
-                     Подпишитесь на нам телеграмм-канал.
-                  </div>
-                  <button class="subscribe__button button">Подписаться</button>
-               </div>
-            </div>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Блокноты, ежедневники
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Детская литература
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Журналы, периодика
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Календари
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Книги на иностранном языке
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Комиксы, манга
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Нехудожественная литература
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                          checked
+                                       />
+                                       Художественная литература (825)
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Учебная литература
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Электронные книги
+                                    </label>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__list-item filter__author">
+                              <div class="filter__title">Автор</div>
+                              <form class="filter__search search">
+                                 <input
+                                    class="search__input"
+                                    type="search"
+                                    name="search"
+                                    id="search"
+                                    placeholder="Введите фамилию автора"
+                                 />
+                              </form>
+                           </li>
+                           <li class="sidebar__list-item filter__year">
+                              <div class="filter__title">Год издания</div>
+                              <input
+                                 class="filter__input"
+                                 type="text"
+                                 value="2019"
+                              />
+                           </li>
+                           <li class="sidebar__list-item filter__price">
+                              <div class="filter__title">Цена</div>
+                              <input
+                                 class="filter__range"
+                                 type="range"
+                                 min="0"
+                                 max="200"
+                                 value="150"
+                                 name="price"
+                                 id="price"
+                              />
+                           </li>
+                           <li class="sidebar__list-item filter__rating">
+                              <div class="filter__title">Рейтинг</div>
+                              <ul class="filter__list">
+                                 <li class="filter__list-item"></li>
+                                 <li class="filter__list-item"></li>
+                                 <li class="filter__list-item"></li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__list-item filter__availability">
+                              <div class="filter__title">Наличие</div>
+                              <ul class="filter__list">
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                          checked
+                                       />
+                                       На складе (1280)
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__category">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                          checked
+                                       />
+                                       Под заказ (680)
+                                    </label>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__list-item filter__ages">
+                              <div class="filter__title">Возраст</div>
+                              <ul class="filter__list filter__list--row">
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       0-3
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       3-6
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       6-9
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       9-12
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       12+
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                          checked
+                                       />
+                                       16+
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item filter__age">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                          checked
+                                       />
+                                       18+
+                                    </label>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__list-item filter__cover">
+                              <div class="filter__title">Обложка</div>
+                              <ul class="filter__list">
+                                 <li class="filter__list-item">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                          checked
+                                       />
+                                       Твердая
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Мягкая
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Полумягкая
+                                    </label>
+                                 </li>
+                                 <li class="filter__list-item">
+                                    <label class="filter__label">
+                                       <input
+                                          class="filter__input"
+                                          type="checkbox"
+                                       />
+                                       Другое
+                                    </label>
+                                 </li>
+                              </ul>
+                           </li>
 
-            <div
-               class="main__selection main__selection--grey catalog-selection"
-            >
-               <div class="catalog-selection__content _container">
-                  <div class="catalog-selection__catalog catalog">
-                     <div class="catalog__content">
-                        <ul
-                           class="catalog__list catalog__list--grid-4_3"
-                           id="popular-bottom"
-                        >
-                           <li class="catalog__list-item banner">
-                              <div class="banner__content">
-                                 <div class="banner__description">
-                                    <div class="banner__title">
-                                       Топ-200 книг
-                                    </div>
-                                    <div class="banner__subtitle">
-                                       по мнению наших читателей
-                                    </div>
-                                 </div>
-                                 <div class="banner__picture"></div>
-                                 <button class="banner__button button">
-                                    перейти
-                                 </button>
-                              </div>
+                           <li class="sidebar__list-item filter__control">
+                              <button class="sidebar__button button">
+                                 Применить
+                              </button>
+                              <button
+                                 class="sidebar__button sidebar__button--clear"
+                              >
+                                 Очистить
+                              </button>
                            </li>
                         </ul>
                      </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="main__selection article-selection">
-               <div class="article-selection__content _container">
-                  <div class="article-selection__description">
-                     <ul class="article-selection__description-list">
-                        <li
-                           class="article-selection__description-list-item article-selection__description-list-item--active"
-                        >
-                           Наши статьи
-                        </li>
-                        <li
-                           class="article-selection__description-list-item article-selection__description-list-item--underline"
-                        >
-                           <a class="navigation-bar__link" href="#"
-                              >Смотреть всё</a
-                           >
-                        </li>
-                     </ul>
-                  </div>
-
-                  <div class="article-selection__articles articles">
-                     <div class="articles__content">
-                        <ul class="articles__list article" id="articles">
-                           <li class="articles__list-item article">
-                              <div class="article__content">
-                                 <a href="#">
-                                    <img
-                                       class="article__picture"
-                                       src="img/articles/1.webp"
-                                       alt="article-1"
-                                       width="272px"
-                                       title="статья"
-                                    />
-                                 </a>
-                                 <div class="article__title">
-                                    Как приучить ребенка читать?
-                                 </div>
-                                 <div class="article__subtitle">
-                                    Разобраться в том, почему дети не любят
-                                    читать, первым попытался американский
-                                    психолог Майкл Коул. Выводы, которые он
-                                    сделал в процессе общения с подростками,
-                                    актуальны для всех стран мира.
-                                 </div>
-                              </div>
-                           </li>
-                           <li class="articles__list-item article">
-                              <div class="article__content">
-                                 <a href="#">
-                                    <img
-                                       class="article__picture"
-                                       src="img/articles/2.webp"
-                                       alt="article-2"
-                                       width="272px"
-                                       title="статья"
-                                    />
-                                 </a>
-                                 <div class="article__title">
-                                    Как издать книгу начинающему писателю?
-                                 </div>
-                                 <div class="article__subtitle">
-                                    Занимаетесь литературным творчеством, но не
-                                    хватает смелости продвигать его в массы?
-                                    Писатель и переводчик Янина Пинчук расскажет
-                                    пошаговую инструкцию для начинающего
-                                    литератора.
-                                 </div>
-                              </div>
-                           </li>
-                           <li class="articles__list-item article">
-                              <div class="article__content">
-                                 <a href="#">
-                                    <img
-                                       class="article__picture"
-                                       src="img/articles/3.webp"
-                                       alt="article-3"
-                                       width="272px"
-                                       title="статья"
-                                    />
-                                 </a>
-                                 <div class="article__title">
-                                    10 позитивных книг, которые избавят от
-                                    плохого настроения.
-                                 </div>
-                                 <div class="article__subtitle">
-                                    Бороться с хандрой можно разными способами:
-                                    съесть шоколадку, выпить горячительного или
-                                    отправиться на прогулку. Но всё же самым
-                                    эффективнымспособом является хорошая и
-                                    весёлая книга.
-                                 </div>
-                              </div>
-                           </li>
-                           <li class="articles__list-item article">
-                              <div class="article__content">
-                                 <a href="#">
-                                    <img
-                                       class="article__picture"
-                                       src="img/articles/4.webp"
-                                       alt="article-4"
-                                       width="272px"
-                                       title="статья"
-                                    />
-                                 </a>
-                                 <div class="article__title">
-                                    Как книга влияет на человека.
-                                 </div>
-                                 <div class="article__subtitle">
-                                    Как книга влияет на человека? Чтение имеет
-                                    целый ряд преимуществ. Особенно важно
-                                    обращаться к книгам в школьные и
-                                    студенческие годы, не ограничиваясь при этом
-                                    учебниками и литературой по праграмме.
-                                 </div>
-                              </div>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div
-               class="main__selection main__selection--grey catalog-selection"
-            >
-               <div class="catalog-selection__content _container">
-                  <div class="catalog-selection__description">
-                     <ul class="catalog-selection__description-list">
-                        <li
-                           class="catalog-selection__description-list-item catalog-selection__description-list-item--active"
-                        >
-                           Новогодние книги для праздничного настроения
-                        </li>
-                        <li
-                           class="catalog-selection__description-list-item catalog-selection__description-list-item--underline"
-                        >
-                           <a class="navigation-bar__link" href="#"
-                              >Смотреть всё</a
-                           >
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="catalog-selection__catalog catalog">
-                     <div class="catalog__content">
+                     <div class="main-catalog__description">
+                        <div class="main-catalog__control">
+                           <div class="main-catalog__sort">
+                              <a href="">Сначала популярные</a>
+                           </div>
+                           <div class="main-catalog__view">
+                              <input
+                                 class="main-catalog__view-column"
+                                 type="radio"
+                                 name="view"
+                                 id="view-1"
+                                 alt="плитка"
+                                 checked
+                              />
+                              <input
+                                 class="main-catalog__view-row"
+                                 type="radio"
+                                 name="view"
+                                 id="view-2"
+                                 alt="строка"
+                              />
+                           </div>
+                        </div>
                         <ul
-                           class="catalog__list catalog__list--grid-4_1"
-                           id="NY"
+                           class="main-catalog__list catalog__list catalog__list--grid-3_1"
+                           id="main-catalog"
                         ></ul>
                      </div>
                   </div>
@@ -816,7 +923,7 @@
                                  src="img/Google-play.svg"
                                  alt="Google-play"
                                  width="112"
-                                 title="google-play"
+                                 title="Google-play"
                               />
                            </a>
                            <a class="app__link" href="#">
@@ -825,7 +932,7 @@
                                  src="img/Apple-store.svg"
                                  alt="Apple-store"
                                  width="112"
-                                 title="apple-store"
+                                 title="Apple-store"
                               />
                            </a>
                         </div>
@@ -841,5 +948,6 @@
          </footer>
       </div>
       <script src="index.js"></script>
+      <script src="catalog.js"></script>
    </body>
 </html>

@@ -24,39 +24,36 @@ async function getCatalog() {
    fillSelection(catalog, "popular-top", 11);
    fillSelection(catalog, "popular-bottom", 10);
    fillSelection(catalog, "NY", 4);
-}
-
-function randomInteger(min, max) {
-   let rand = min + Math.random() * (max + 1 - min);
-   return Math.floor(rand);
+   fillSelection(catalog, "main-catalog", catalog.length);
 }
 
 function fillSelection(catalog, elementId, length) {
-   var innerText = document.getElementById(elementId).innerHTML;
+   if (document.getElementById(elementId))
+      var innerText = document.getElementById(elementId).innerHTML;
+   else return;
 
    for (let i = 0; i < length; i++) {
-      let random = randomInteger(1, catalog.length - 1);
-      innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[random].id}">
+      innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[i].id}">
                         <div class="product__content">
                            <a class="product__link" href="#">
-                              <img class="product__picture" src="${catalog[random].image}" title="${catalog[random].title}" width="272" height="216">
+                              <img class="product__picture" src="${catalog[i].image}" title="${catalog[i].title}" alt="${catalog[i].title}" width="272" height="216">
                            </a>
                            <div class="product__description">
                                  <div class="product__title">
-                                    ${catalog[random].title}
-                                 </div>
+                                    ${catalog[i].title}
                                  <div class="product__author">
-                                    ${catalog[random].author}
+                                    ${catalog[i].author}
+                                 </div>
                                  </div>
                               <div class="product__rating rating">
-                                 <div class="rating__stars rating__stars--${catalog[random].rating}"></div>
+                                 <div class="rating__stars rating__stars--${catalog[i].rating}"></div>
                               </div>
                               <div class="product__bottom">
                                  <div class="product__cost">
                                     <div class="product__price product__price--emphasis">
-                                    ${catalog[random].price}
+                                    ${catalog[i].price}
                                     </div>
-                                    <s class="product__old-price">${catalog[random].preprice}</s>
+                                    <s class="product__old-price">${catalog[i].preprice}</s>
                                  </div>
                                  <div class="product__control">
                                     <input type="checkbox" name="favorite" class="product__favorite favorite">
@@ -76,28 +73,28 @@ function fillPopularBottom(catalog, elementId, length) {
    // var innerText = document.getElementById("popular-bottom").innerHTML;
    var innerText = document.getElementById(elementId).innerHTML;
    for (let i = 0; i < length; i++) {
-      let random = randomInteger(1, catalog.length - 1);
-      innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[random].id}">
+      let i = iInteger(1, catalog.length - 1);
+      innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[i].id}">
                         <div class="product__content">
                            <a class="product__link" href="#">
-                              <img class="product__picture" src="${catalog[random].image}" title="${catalog[random].title}" width="272" height="216">
+                              <img class="product__picture" src="${catalog[i].image}" title="${catalog[i].title}" width="272" height="216">
                            </a>
                            <div class="product__description">
                                  <div class="product__title">
-                                    ${catalog[random].title}
+                                    ${catalog[i].title}
                                  </div>
                                  <div class="product__author">
-                                    ${catalog[random].author}
+                                    ${catalog[i].author}
                                  </div>
                               <div class="product__rating rating">
-                                 <div class="rating__stars rating__stars--${catalog[random].rating}"></div>
+                                 <div class="rating__stars rating__stars--${catalog[i].rating}"></div>
                               </div>
                               <div class="product__bottom">
                                  <div class="product__cost">
                                     <div class="product__price product__price--emphasis">
-                                    ${catalog[random].price}
+                                    ${catalog[i].price}
                                     </div>
-                                    <s class="product__old-price">${catalog[random].preprice}</s>
+                                    <s class="product__old-price">${catalog[i].preprice}</s>
                                  </div>
                                  <div class="product__control">
                                     <input type="checkbox" name="favorite" class="product__favorite-checkbox">
