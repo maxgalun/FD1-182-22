@@ -200,6 +200,19 @@ body {
       @include row;
       gap: 26.5px;
    }
+
+   &__burger {
+      display: none;
+      width: 20px;
+      height: 15px;
+      background: url(../../img/burger.svg) no-repeat;
+      filter: invert(1);
+      background-size: cover;
+      cursor: pointer;
+      @media all and (max-width: 900px) {
+         display: inline-block;
+      }
+   }
 }
 
 .logo {
@@ -210,11 +223,18 @@ body {
 
    &__img {
       margin-right: 20px;
+      @media all and (max-width: 900px) {
+         margin-right: 0px;
+      }
    }
 
    &__title {
       font-size: 20px;
       font-weight: 500;
+
+      @media all and (max-width: 900px) {
+         display: none;
+      }
    }
 }
 
@@ -226,6 +246,9 @@ body {
 
    &__list-item {
       position: relative;
+      @media all and (max-width: 900px) {
+         display: none;
+      }
    }
 
    &__link {
@@ -263,6 +286,7 @@ body {
       display: flex;
       flex: 1;
       align-items: center;
+      justify-content: flex-end;
       gap: 16px;
       height: 100%;
    }
@@ -280,6 +304,9 @@ body {
       background-size: 600% 100%;
       transition: all 0.5s ease-in-out;
       cursor: pointer;
+      @media all and (max-width: 900px) {
+         display: none;
+      }
    }
 
    &__button:hover {
@@ -295,15 +322,33 @@ body {
       margin-right: 13px;
    }
 
+   &__icon {
+      &::before {
+         content: "";
+         display: none;
+         width: 17px;
+         height: 17px;
+         background: url(../../img/row.svg) no-repeat center;
+         background-size: 17px 17px;
+         filter: invert(1);
+         @media all and (max-width: 900px) {
+            display: inline-block;
+         }
+      }
+   }
+
    &__phone {
       @include row;
       justify-content: center;
       height: 100%;
       font-size: 18px;
       font-weight: 500;
-
       color: $black;
       transition: $transition;
+
+      @media all and (max-width: 900px) {
+         font-size: 14px;
+      }
    }
 
    &__phone:hover {
@@ -328,6 +373,23 @@ body {
       height: 40px;
       background-color: $white;
       border-radius: 4px;
+      @media all and (max-width: 900px) {
+         display: none;
+      }
+   }
+
+   &__search-button {
+      display: none;
+      width: 20px;
+      height: 20px;
+      margin-right: 10.5px;
+      background: url(../../img/magnifier.svg) no-repeat;
+      background-size: cover;
+      cursor: pointer;
+
+      @media all and (max-width: 900px) {
+         display: inline-block;
+      }
    }
 
    &__info {
@@ -340,7 +402,6 @@ body {
 
    &__login {
       @include row;
-      display: block;
       max-width: 200px;
       white-space: nowrap;
       overflow: hidden;
@@ -360,6 +421,12 @@ body {
 
    &__login:hover {
       @include menu-hover-effect;
+   }
+
+   &__login-name {
+      @media all and (max-width: 900px) {
+         display: none;
+      }
    }
 
    &__favorite {
@@ -431,6 +498,12 @@ body {
       color: $white;
       text-align: center;
    }
+
+   &__cart-cost {
+      @media all and (max-width: 900px) {
+         display: none;
+      }
+   }
 }
 
 .search {
@@ -447,6 +520,17 @@ body {
 .main-top {
    height: 456px;
 
+   @media all and (max-width: 900px) {
+      height: 380px;
+   }
+
+   @media all and (max-width: 700px) {
+      height: 300px;
+   }
+
+   @media all and (max-width: 500px) {
+      height: 200px;
+   }
    &__content {
       @include row;
       height: 100%;
@@ -457,6 +541,10 @@ body {
       min-width: 272px;
       height: 100%;
       z-index: 20;
+
+      @media all and (max-width: 900px) {
+         display: none;
+      }
    }
 
    &__slider {
@@ -500,10 +588,17 @@ body {
       font-weight: 600;
       color: $white;
       text-shadow: 1px 1px 2px black;
+      @media all and (max-width: 500px) {
+         font-size: 18px;
+      }
    }
 
    &__button {
       @include button(183px, 44px);
+      @media all and (max-width: 500px) {
+         min-width: 150px;
+         min-height: 40px;
+      }
    }
 }
 
@@ -768,6 +863,7 @@ body {
 
    &__control {
       display: flex;
+
       gap: 8px;
    }
 }
@@ -837,8 +933,13 @@ body {
 }
 
 .subscribe {
-   height: 88px;
+   height: 1px;
+   min-height: 88px;
    background-color: $white;
+
+   @media all and (max-width: 600px) {
+      display: none;
+   }
 
    &__content {
       display: flex;
@@ -852,6 +953,9 @@ body {
       font-size: 18px;
       font-weight: 500;
       color: #727272;
+      @media all and (max-width: 500px) {
+         font-size: 16px;
+      }
    }
 
    &__button {
@@ -866,6 +970,10 @@ body {
    grid-row: 2 / span 2;
    border-radius: 4px;
    background-color: #406d6f;
+
+   @media all and (max-width: 589px) {
+      display: none;
+   }
 
    &__content {
       width: 100%;
@@ -915,11 +1023,17 @@ body {
    background-repeat: no-repeat;
    background-position: center center;
    border-radius: 4px;
+
+   @media all and (max-width: 1000px) {
+      grid-column: 1;
+      grid-row: 2;
+   }
 }
 
 .article-selection {
    &__description {
       margin-bottom: -16px;
+      padding: 10px 0;
    }
 
    &__description-list {
@@ -956,28 +1070,40 @@ body {
    &__content {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 8px;
    }
 
    &__title {
       font-size: 16px;
+      max-width: 272px;
    }
 
    &__subtitle {
+      max-width: 272px;
       font-weight: 300;
       font-size: 14px;
+   }
+
+   &__picture {
+      display: block;
+      margin: 0 auto;
    }
 }
 
 .footer-navigation {
    &__content {
-      padding: 40px 0;
+      padding: 40px 15px;
    }
 
    &__list {
       display: flex;
       justify-content: space-between;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 20px;
+      @media all and (max-width: 600px) {
+         flex-direction: column;
+      }
    }
 
    &__title {
@@ -1010,6 +1136,12 @@ body {
       display: flex;
       justify-content: space-between;
       text-align: center;
+      margin-bottom: 10px;
+
+      @media all and (max-width: 600px) {
+         justify-content: flex-start;
+         gap: 10px;
+      }
    }
 
    &__list-item {
