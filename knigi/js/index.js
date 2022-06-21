@@ -20,9 +20,9 @@ async function getCatalog() {
    fillSelection(catalog, "popular-bottom", 10);
    fillSelection(catalog, "NY", 4);
    fillSelection(catalog, "main-catalog", catalog.length);
-
-   console.log(cartArr);
    fillCart(catalog, "order", cartArr);
+   fillSelection(catalog, "together", 4);
+   fillRecently(catalog, "recently", 4);
 }
 
 function fillSelection(catalog, elementId, length) {
@@ -75,6 +75,24 @@ function fillSelection(catalog, elementId, length) {
                                  </div>
                               </div>
                            </div>
+                        </div>
+                     </li>`;
+   }
+
+   document.getElementById(elementId).innerHTML = innerText;
+}
+
+function fillRecently(catalog, elementId, length) {
+   if (document.getElementById(elementId))
+      var innerText = document.getElementById(elementId).innerHTML;
+   else return;
+
+   for (let i = 0; i < length; i++) {
+      innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[i].id}">
+                        <div class="product__content">
+                           <a class="product__link" href="#">
+                              <img class="product__picture product__picture--no-transform" src="${catalog[i].image}" title="${catalog[i].title}" alt="${catalog[i].title}" width="136">
+                           </a>
                         </div>
                      </li>`;
    }
