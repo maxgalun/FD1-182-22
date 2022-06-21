@@ -1,3 +1,5 @@
+console.log("js");
+
 var favoriteArr = localStorage.getItem("favorite");
 var cartArr = localStorage.getItem("cart");
 
@@ -108,7 +110,7 @@ function fillCart(catalog, elementId, cartArr) {
    for (let i = 0; i < cartArr.length; i++) {
       for (let obj of catalog) {
          if (obj.id == cartArr[i]) {
-            innerText += `<li class="description__order-list-item order">
+            innerText += `<li class="description__order-list-item order" data-catalog-id="${obj.id}">
                            <div class="order__content">
                               <div class="order__description product">
                                  <a href="/book.html">
@@ -138,7 +140,7 @@ function fillCart(catalog, elementId, cartArr) {
                               </div>
                               <div class="order__cost"> ${obj.price}</div>
                               <div class="order__control">
-                                 <input type="checkbox" name="favorite" class="order__favorite favorite">
+                                 <input type="checkbox" class="order__favorite favorite" data-favorite>
                                  <button class="order__remove"></button>
                               </div>
                            </div>
@@ -155,6 +157,7 @@ function checkedControl(arr, id) {
 }
 
 document.addEventListener("click", function (event) {
+   console.log(event.target);
    if (event.target.dataset.favorite != undefined) {
       if (event.target.checked)
          incrementArray(
@@ -214,7 +217,7 @@ function updateLocalStorage(array) {
 
 function updateCounter(dataAttr, array) {
    array.length == 0
-      ? (document.querySelector(`[data-${dataAttr}-counter]`).innerText = "")
+      ? (document.querySelector(`[data-${dataAttr}-counter]`).innerText = null)
       : (document.querySelector(`[data-${dataAttr}-counter]`).innerText =
            array.length);
 }
