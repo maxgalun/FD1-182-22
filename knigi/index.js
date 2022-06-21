@@ -35,7 +35,7 @@ function fillSelection(catalog, elementId, length) {
    for (let i = 0; i < length; i++) {
       innerText += `<li class="catalog__list-item product" data-catalog-id="${catalog[i].id}">
                         <div class="product__content">
-                           <a class="product__link" href="#">
+                           <a class="product__link" href="/book.html">
                               <img class="product__picture" src="${catalog[i].image}" title="${catalog[i].title}" alt="${catalog[i].title}" width="272" height="216">
                            </a>
                            <div class="product__description">
